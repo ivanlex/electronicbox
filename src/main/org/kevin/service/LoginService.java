@@ -74,7 +74,7 @@ public class LoginService implements LoginServiceInterface {
     public LoginPayload createLoginToken(String userToken, String userPwd) {
         return LoginPayLoadFactory.Create(isUserTokenExist(userToken, userPwd),
                 isUserTokenLocked(userToken, userPwd),
-                LoginPayLoadFactory.TokenType.UserToken,
+                LoginPayLoadFactory.TokenType.LoginToken,
                 generateUserToken(userToken));
     }
 
