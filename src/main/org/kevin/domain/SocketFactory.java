@@ -1,4 +1,4 @@
-package org.kevin.utility;
+package org.kevin.domain;
 
 import org.apache.logging.log4j.core.util.KeyValuePair;
 import org.kevin.common.Commons;
@@ -11,7 +11,7 @@ import java.util.Map;
 
 import static org.kevin.common.Commons.*;
 
-public class MyFactory {
+public class SocketFactory {
     public static <TResponse extends IResponse> TResponse createSocketResponse(RequestType requestType, HashMap<String, String> properties) {
         StringBuilder sb = new StringBuilder();
 

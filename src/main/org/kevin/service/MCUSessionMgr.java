@@ -1,14 +1,12 @@
 package org.kevin.service;
 
-import org.kevin.common.Commons;
 import org.kevin.domain.MCUInfo;
 import org.kevin.service.enums.RequestType;
 import org.kevin.service.interfaces.IRequest;
 import org.kevin.service.interfaces.IResponse;
-import org.kevin.utility.MyFactory;
+import org.kevin.domain.SocketFactory;
 import org.kevin.utility.Utility;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -57,7 +55,7 @@ public class MCUSessionMgr {
                 resProperties.put(KEY_ERR_CODE, ERR_SOCKET_KEYS_INCOMPLETE_403);
         }
 
-        return MyFactory.createSocketResponse(requestType, resProperties);
+        return SocketFactory.createSocketResponse(requestType, resProperties);
     }
 
     public void ProcessMCULogin(MCUInfo mcuInfo, HashMap<String, String> resProperties) {

@@ -23,4 +23,11 @@ public class Commons {
     public static final String ERR_SOCKET_MCU_NOT_EXIST_404 = "404";
     public static final String ERR_SOCKET_MCU_NOT_VALID_405 = "405";
     public static final String ERR_SOCKET_MCU_TOKEN_NOT_VALID_406 = "406";
+
+    public static final String SUCCESS_WEB = "200";
+
+    public static final String ERR_WEB_USER_NOT_EXIST_401 = "401";
+    public static final String ERR_WEB_USER_IS_LOCKED_402 = "402";
+    public static final String ERR_WEB_USERTOKEN_NOT_EXIST_403 = "403";
+    public static final String ERR_WEB_UNKNOWN_499 = "499";
 }
