@@ -1,20 +1,17 @@
 package org.kevin.service.interfaces;
 
-import org.kevin.common.Commons;
-import org.kevin.domain.MCUInfo;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Transactional;
+import org.kevin.domain.MCU;
 
 public interface LoginServiceInterface {
-    boolean isMCUExist(MCUInfo mcuInfo);
+    boolean isMCUExist(MCU mcu);
 
-    boolean isMCUValid(MCUInfo mcuInfo);
+    boolean isMCUValid(MCU mcu);
 
-    boolean isMCUTokenValid(MCUInfo mcuInfo);
+    boolean isMCUTokenValid(MCU mcu);
 
-    boolean isMCURequireReboot(MCUInfo mcuInfo);
+    boolean isMCURequireReboot(MCU mcu);
 
-    String createMCUToken(MCUInfo mcuInfo);
+    String createMCUToken(MCU mcu);
 
     boolean isUserExist(String username);
 

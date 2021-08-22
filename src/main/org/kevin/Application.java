@@ -1,9 +1,9 @@
 package org.kevin;
 
 import org.kevin.service.SocketService;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
@@ -11,9 +11,9 @@ import org.springframework.context.ApplicationContext;
 import java.util.Date;
 import java.util.TimeZone;
 
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@SpringBootApplication
+@MapperScan("org.kevin.dao")
 public class Application extends SpringBootServletInitializer {
-
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {

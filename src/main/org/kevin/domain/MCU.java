@@ -1,10 +1,6 @@
 package org.kevin.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-
-public class MCUInfo {
+public class MCU {
     Long mId;
     String mMCUId;
     String mMCUPwd;
@@ -26,7 +22,7 @@ public class MCUInfo {
         mMCUToken = MCUToken;
     }
 
-    public MCUInfo(String MCUId, String MCUPwd, String MCUToken) {
+    public MCU(String MCUId, String MCUPwd, String MCUToken) {
         mMCUId = MCUId;
         mMCUPwd = MCUPwd;
         mMCUToken = MCUToken;

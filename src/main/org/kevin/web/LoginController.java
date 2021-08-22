@@ -1,6 +1,7 @@
 package org.kevin.web;
 
 import org.kevin.domain.LoginPayload;
+import org.kevin.dao.UserDao;
 import org.kevin.service.LoginService;
 import org.kevin.web.base.ControllerBase;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ public class LoginController extends ControllerBase {
 
     @RequestMapping(path = "userLogin", method = RequestMethod.POST)
     LoginPayload getUserToken(@RequestParam String username) {
+
         LoginPayload loginPayload = mLoginService.createUserToken(username);
         if (loginPayload != null)
             return loginPayload;

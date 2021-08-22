@@ -17,6 +17,15 @@
     <dependencyManagement>
         <dependencies>
 
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${sprintboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -28,13 +37,6 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <type>pom</type>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-jpa</artifactId>
                 <type>pom</type>
             </dependency>
 
@@ -89,6 +91,15 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
@@ -110,19 +121,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
+            <scope>compile</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j2 -->
@@ -159,11 +164,19 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>RELEASE</version>
             <scope>compile</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis.version}</version>
         </dependency>
 
     </dependencies>
@@ -185,9 +198,11 @@
 
 
     <properties>
+        <sprintboot.version>2.1.5.RELEASE</sprintboot.version>
         <mysql.version>8.0.19</mysql.version>
         <dbcp.version>2.7.0</dbcp.version>
         <gson.version>2.8.5</gson.version>
+        <mybatis.version>2.1.2</mybatis.version>
         <commonCodec.version>1.14</commonCodec.version>
         <apacheCommon.version>3.9</apacheCommon.version>
     </properties>

@@ -1,8 +1,6 @@
 package org.kevin.web;
 
-import org.kevin.utility.Utility;
 import org.kevin.web.base.ControllerBase;
-import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +10,6 @@ public class MainController extends ControllerBase {
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String indexPage() {
-        return mUtility.getSystemVersion();
+        return mCommonUtility.getSystemVersion();
     }
 }

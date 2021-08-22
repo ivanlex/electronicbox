@@ -1,8 +1,6 @@
 package org.kevin.utility;
 
-import org.jetbrains.annotations.Nullable;
-import org.kevin.common.Commons;
-import org.kevin.domain.MCUInfo;
+import org.kevin.domain.MCU;
 import org.kevin.service.interfaces.IRequest;
 import org.kevin.system.SystemConfig;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +11,7 @@ import java.util.HashMap;
 import static org.kevin.common.Commons.*;
 
 @Component
-public class Utility {
+public class CommonUtility {
 
     SystemConfig mSystemConfig;
 
@@ -26,7 +24,7 @@ public class Utility {
         return String.format("System version is %s", mSystemConfig.version);
     }
 
-    public static MCUInfo extractUserInfo(HashMap<String, String> properties, boolean checkToken) {
+    public static MCU extractUserInfo(HashMap<String, String> properties, boolean checkToken) {
         String mcuId = null;
         String mcuPwd = null;
         String mcuToken = null;
@@ -44,7 +42,7 @@ public class Utility {
                 (checkToken ? mcuToken == null : true))
             return null;
         else
-            return new MCUInfo(mcuId, mcuPwd, mcuToken);
+            return new MCU(mcuId, mcuPwd, mcuToken);
     }
 
     public static boolean validateMCUMsg(IRequest sb) {
