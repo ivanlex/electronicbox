@@ -1,7 +1,8 @@
 package org.kevin.web;
 
-import org.kevin.domain.LoginPayload;
-import org.kevin.dao.UserDao;
+import org.kevin.domain.reqres.mcu.LoginPayload;
+import org.kevin.domain.reqres.web.LoginRequest;
+import org.kevin.domain.reqres.web.LoginResponse;
 import org.kevin.service.LoginService;
 import org.kevin.web.base.ControllerBase;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,12 @@ public class LoginController extends ControllerBase {
     @Autowired
     public void setLoginService(LoginService loginService) {
         mLoginService = loginService;
+    }
+
+    @RequestMapping(path = "loginVerify", method = RequestMethod.POST)
+    LoginResponse loginVerify(@RequestBody LoginRequest request)
+    {
+        return new LoginResponse("123");
     }
 
     @RequestMapping(path = "userLogin", method = RequestMethod.POST)

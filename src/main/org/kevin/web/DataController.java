@@ -28,6 +28,8 @@ public class DataController extends ControllerBase {
 
     boolean resetMCU(String mcuId) {
         //TODO resetMCU
+
+        return true;
     }
 
 }

@@ -4,7 +4,7 @@ import org.kevin.domain.MCU;
 import org.kevin.service.enums.RequestType;
 import org.kevin.service.interfaces.IRequest;
 import org.kevin.service.interfaces.IResponse;
-import org.kevin.domain.SocketFactory;
+import org.kevin.domain.reqres.mcu.SocketFactory;
 import org.kevin.utility.CommonUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

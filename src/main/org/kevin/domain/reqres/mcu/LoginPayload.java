@@ -1,4 +1,4 @@
-package org.kevin.domain;
+package org.kevin.domain.reqres.mcu;
 
 import org.kevin.domain.base.PayloadBase;
 

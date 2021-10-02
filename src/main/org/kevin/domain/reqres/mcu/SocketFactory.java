@@ -1,4 +1,4 @@
-package org.kevin.domain;
+package org.kevin.domain.reqres.mcu;
 
 import org.apache.logging.log4j.core.util.KeyValuePair;
 import org.kevin.common.Commons;
