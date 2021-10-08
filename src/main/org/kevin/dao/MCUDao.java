@@ -1,9 +1,6 @@
 package org.kevin.dao;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.kevin.domain.MCU;
 import org.springframework.stereotype.Repository;
 
@@ -19,6 +16,9 @@ public interface MCUDao {
             @Result(property = "mcuToken", column = "MCU_Token")
     })
     List<MCU> getAll();
+
+    @Update({"update t_User set user_name = #{userName}"})
+    void updateMCUStatus(MCU mcu);
 
     MCU getMCUByMCUID(String mcuId);
 

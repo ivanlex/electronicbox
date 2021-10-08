@@ -1,6 +1,7 @@
 package org.kevin;
 
 import org.kevin.service.SocketService;
+import org.kevin.service.SocketService2;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,7 +25,7 @@ public class Application extends SpringBootServletInitializer {
     public static void main(String[] args) {
         TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
         ApplicationContext applicationContext = SpringApplication.run(Application.class, args);
-        applicationContext.getBean(SocketService.class).start();
+        applicationContext.getBean(SocketService2.class).start();
         System.out.println(String.format("Server is running ,%s", new Date()));
     }
 }

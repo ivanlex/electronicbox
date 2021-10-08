@@ -1,6 +1,6 @@
 package org.kevin.domain.reqres.web;
 
-public class LoginRequest {
+public class LoginRequest2 {
     String mUsername;
     String mPassword;
 
@@ -20,7 +20,7 @@ public class LoginRequest {
         mPassword = password;
     }
 
-    public LoginRequest(String username, String  password)
+    public LoginRequest2(String username, String  password)
     {
         mUsername = username;
         mPassword = password;
