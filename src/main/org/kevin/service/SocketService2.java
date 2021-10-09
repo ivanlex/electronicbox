@@ -1,5 +1,6 @@
 package org.kevin.service;
 
+import org.kevin.dao.MCUHistoryDao;
 import org.kevin.dao.MCUOpInfoDao;
 import org.kevin.service.interfaces.IRequest;
 import org.kevin.service.interfaces.IResponse;
@@ -20,12 +21,18 @@ import java.util.concurrent.Future;
 @Service
 public class SocketService2 {
     MCUOpInfoDao mMCUOpInfoDao;
+    MCUHistoryDao mMCUHistoryDao;
 
     private ServerSocket mServerSocket;
     private boolean mStarted;
     private Integer mPort = 2800;
 
     private ExecutorService threadPool = Executors.newCachedThreadPool();
+
+    @Autowired
+    public void setMCUHistoryDao(MCUHistoryDao MCUHistoryDao) {
+        mMCUHistoryDao = MCUHistoryDao;
+    }
 
     @Autowired
     public void setMCUOpInfoDao(MCUOpInfoDao MCUOpInfoDao) {
@@ -115,6 +122,12 @@ public class SocketService2 {
             String mcuId = Integer.valueOf ((int)bytes[0]).toString();
             System.out.println("MCUId:" +  mcuId + "Lightning count : " + bytes[5]);
             mMCUOpInfoDao.updateMCUOpInfo(mcuId,bytes[1],bytes[2],bytes[3],bytes[4],bytes[5]);
+            for(int i =1; i<bytes.length;i++){
+                if(bytes[i] != 0)
+                {
+                    mMCUHistoryDao.insertMCUHistory(mcuId,bytes[1],bytes[2],bytes[3],bytes[4],bytes[5],new Date());
+                }
+            }
         }
     }
 }
