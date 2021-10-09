@@ -1,39 +1,29 @@
 package org.kevin.web;
 
-import org.kevin.domain.reqres.mcu.LoginPayload;
-import org.kevin.service.LoginService;
+import org.kevin.domain.reqres.web.LoginRequest;
+import org.kevin.domain.reqres.web.LoginResponse;
+import org.kevin.service.LoginService2;
 import org.kevin.web.base.ControllerBase;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class LoginController extends ControllerBase {
-
-    LoginService mLoginService;
+    LoginService2 mLoginService2;
 
     @Autowired
-    public void setLoginService(LoginService loginService) {
-        mLoginService = loginService;
+    public void setLoginService2(LoginService2 loginService2) {
+        mLoginService2 = loginService2;
     }
 
-    @Deprecated
-    @RequestMapping(path = "userLogin", method = RequestMethod.POST)
-    LoginPayload getUserToken(@RequestParam String username) {
-
-        LoginPayload loginPayload = mLoginService.createUserToken(username);
-        if (loginPayload != null)
-            return loginPayload;
-        else
-            return new LoginPayload();
+    @RequestMapping(path = "loginVerify", method = RequestMethod.POST)
+    LoginResponse loginVerify(@RequestBody LoginRequest request)
+    {
+        LoginResponse response =  mLoginService2.createLoginToken(request.getUsername(),request.getPassword());
+        return response;
     }
 
-    @Deprecated
-    @RequestMapping(path = "userVerify", method = RequestMethod.POST)
-    LoginPayload getLoginToken(@RequestParam String userToken, @RequestParam String userPassword) {
-        LoginPayload loginPayload = mLoginService.createLoginToken(userToken, userPassword);
-        if (loginPayload != null)
-            return loginPayload;
-        else
-            return new LoginPayload();
-    }
 }

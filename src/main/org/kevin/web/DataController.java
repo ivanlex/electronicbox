@@ -1,7 +1,8 @@
 package org.kevin.web;
 
+import org.kevin.dao.MCUOpInfoDao;
 import org.kevin.domain.MCU;
-import org.kevin.service.DataService;
+import org.kevin.domain.MCUOpInfo;
 import org.kevin.web.base.ControllerBase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,22 +15,15 @@ import java.util.List;
 @RestController
 public class DataController extends ControllerBase {
 
-    DataService mDataService;
+    MCUOpInfoDao mMCUOpInfoDao;
 
     @Autowired
-    private void setDataService(DataService dataService) {
-        mDataService = dataService;
+    public void setMCUOpInfoDao(MCUOpInfoDao MCUOpInfoDao) {
+        mMCUOpInfoDao = MCUOpInfoDao;
     }
 
-    @RequestMapping(path = "getMCUs", method = RequestMethod.POST)
-    List<MCU> getMCUs(@RequestParam String LoginToken) {
-        return mDataService.getMCUs(LoginToken);
+    @RequestMapping(path = "mCUOpInfo", method = RequestMethod.POST)
+    List<MCUOpInfo> getMCUOpInfo() {
+        return mMCUOpInfoDao.getAllMCUOpInfo();
     }
-
-    boolean resetMCU(String mcuId) {
-        //TODO resetMCU
-
-        return true;
-    }
-
 }

@@ -1,6 +1,6 @@
 package org.kevin.domain.reqres.web;
 
-public class LoginResponse2 {
+public class LoginResponse {
     String mToken;
 
     public String getToken() {
@@ -11,7 +11,7 @@ public class LoginResponse2 {
         mToken = token;
     }
 
-    public LoginResponse2(String token)
+    public LoginResponse(String token)
     {
         mToken = token;
     }
