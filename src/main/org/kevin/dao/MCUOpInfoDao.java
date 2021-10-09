@@ -5,6 +5,7 @@ import org.kevin.domain.MCU;
 import org.kevin.domain.MCUOpInfo;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Mapper
@@ -22,8 +23,8 @@ public interface MCUOpInfoDao {
     })
     List<MCUOpInfo> getAllMCUOpInfo();
 
-    @Update("Update t_mcu_op_info set Open_Status = #{openStatus},Crack_Status=#{crackStatus},Lightning_Status=#{lightningStatus},Grounded_Status=#{groundedStatus},Lightning_Count =#{lightningCount} where MCU_ID = #{mcuId}")
-    void updateMCUOpInfo(String mcuId,int openStatus,int crackStatus,int lightningStatus,int groundedStatus,int lightningCount);
+    @Update("Update t_mcu_op_info set Open_Status = #{openStatus},Crack_Status=#{crackStatus},Lightning_Status=#{lightningStatus},Grounded_Status=#{groundedStatus},Lightning_Count =#{lightningCount},Update_Time=#{updateTime} where MCU_ID = #{mcuId}")
+    void updateMCUOpInfo(String mcuId, int openStatus, int crackStatus, int lightningStatus, int groundedStatus, int lightningCount, Date updateTime);
 
     @Insert("Insert into t_mcu_op_info (MCU_ID, Open_Status ,Crack_Status,Lightning_Status, Grounded_Status, Lightning_Count) VALUES " +
             "(#{mcuId},0,0,0,0,0)")

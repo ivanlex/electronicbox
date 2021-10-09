@@ -21,6 +21,12 @@ public interface MaintainDao {
     @Delete("Delete from t_mcu_basic_info where MCU_ID = #{mcuId}")
     void removeMcu(String mcuId);
 
+    @Select("Select count(*) from t_mcu_basic_info")
+    int countInstalledMCU();
+
+    @Select("Select count(*) from t_mcu_op_info where NOW() - Update_Time <  100 * #{minute} ")
+    int countOnlineMCU(int minute);
+
     @Select("Select * from t_mcu_basic_info")
     @Results(value = {
             @Result(property = "mcuId",column = "MCU_ID"),

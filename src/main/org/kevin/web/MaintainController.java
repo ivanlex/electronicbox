@@ -1,10 +1,7 @@
 package org.kevin.web;
 
 import org.kevin.domain.MCUBasic;
-import org.kevin.domain.reqres.web.MCUAddRequest;
-import org.kevin.domain.reqres.web.MCUAddResponse;
-import org.kevin.domain.reqres.web.MCURemoveRequest;
-import org.kevin.domain.reqres.web.MCURemoveResponse;
+import org.kevin.domain.reqres.web.*;
 import org.kevin.service.MaintainService;
 import org.kevin.web.base.ControllerBase;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,5 +35,10 @@ public class MaintainController extends ControllerBase {
     @RequestMapping(path = "getAllMcu",method = RequestMethod.POST)
     public List<MCUBasic> getAllMCU(){
         return mMaintainService.getAllMCU();
+    }
+
+    @RequestMapping(path = "mcuStatics", method = RequestMethod.POST)
+    public MCUStaticsResponse getMCUStatics(){
+        return mMaintainService.getMCUStatics();
     }
 }

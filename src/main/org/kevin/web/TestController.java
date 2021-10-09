@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -21,6 +22,6 @@ public class TestController {
 
     @RequestMapping(path = "mcuupdate", method = RequestMethod.POST)
     void getMCUs() {
-        mMCUOpInfoDao.updateMCUOpInfo("1",0,0,0,0,26);
+        mMCUOpInfoDao.updateMCUOpInfo("1",0,0,0,0,26,new Date());
     }
 }

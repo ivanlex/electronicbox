@@ -5,6 +5,7 @@ import org.kevin.dao.MaintainDao;
 import org.kevin.domain.MCUBasic;
 import org.kevin.domain.reqres.web.MCUAddResponse;
 import org.kevin.domain.reqres.web.MCURemoveResponse;
+import org.kevin.domain.reqres.web.MCUStaticsResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,6 +62,15 @@ public class MaintainService {
         mMaintainDao.removeMcu(mcuId);
         mMCUOpInfoDao.removeMCUOpInfo(mcuId);
         response.setActionComplete(true);
+
+        return response;
+    }
+
+    public MCUStaticsResponse getMCUStatics(){
+        MCUStaticsResponse response = new MCUStaticsResponse();
+
+        response.setInstalledMCU(mMaintainDao.countInstalledMCU());
+        response.setOnlineMCU(mMaintainDao.countOnlineMCU(1));
 
         return response;
     }
