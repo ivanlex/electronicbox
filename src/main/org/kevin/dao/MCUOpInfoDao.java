@@ -25,4 +25,11 @@ public interface MCUOpInfoDao {
     @Update("Update t_mcu_op_info set Open_Status = #{openStatus},Crack_Status=#{crackStatus},Lightning_Status=#{lightningStatus},Grounded_Status=#{groundedStatus},Lightning_Count =#{lightningCount} where MCU_ID = #{mcuId}")
     void updateMCUOpInfo(String mcuId,int openStatus,int crackStatus,int lightningStatus,int groundedStatus,int lightningCount);
 
+    @Insert("Insert into t_mcu_op_info (MCU_ID, Open_Status ,Crack_Status,Lightning_Status, Grounded_Status, Lightning_Count) VALUES " +
+            "(#{mcuId},0,0,0,0,0)")
+    void addMCUOpInfo(String mcuId);
+
+    @Delete("Delete from t_mcu_op_info where MCU_ID = #{mcuId}")
+    void removeMCUOpInfo(String mcuId);
+
 }

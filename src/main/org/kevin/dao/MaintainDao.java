@@ -23,9 +23,9 @@ public interface MaintainDao {
 
     @Select("Select * from t_mcu_basic_info")
     @Results(value = {
-            @Result(property = "",column = "MCU_ID"),
-            @Result(property = "",column = "Address"),
-            @Result(property = "",column = "Install_Date", javaType = java.util.Date.class,jdbcType= JdbcType.TIMESTAMP),
+            @Result(property = "mcuId",column = "MCU_ID"),
+            @Result(property = "address",column = "Address"),
+            @Result(property = "installDate",column = "Install_Date", javaType = java.util.Date.class,jdbcType= JdbcType.TIMESTAMP),
     })
     List<MCUBasic> getAllMcu();
 

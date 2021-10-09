@@ -1,5 +1,6 @@
 package org.kevin.service;
 
+import org.kevin.dao.MCUOpInfoDao;
 import org.kevin.dao.MaintainDao;
 import org.kevin.domain.MCUBasic;
 import org.kevin.domain.reqres.web.MCUAddResponse;
@@ -14,6 +15,7 @@ import java.util.List;
 public class MaintainService {
 
     MaintainDao mMaintainDao;
+    MCUOpInfoDao mMCUOpInfoDao;
 
     public boolean isExist(String mcuId){
         return mMaintainDao.isMcuExist(mcuId);
@@ -22,6 +24,11 @@ public class MaintainService {
     @Autowired
     public void setMaintainDao(MaintainDao maintainDao) {
         mMaintainDao = maintainDao;
+    }
+
+    @Autowired
+    public void setMCUOpInfoDao(MCUOpInfoDao MCUOpInfoDao) {
+        mMCUOpInfoDao = MCUOpInfoDao;
     }
 
     public List<MCUBasic> getAllMCU(){
@@ -39,6 +46,8 @@ public class MaintainService {
         }
         else{
             mMaintainDao.addNewMcu(mcuId,installedAddress,new Date());
+            mMCUOpInfoDao.addMCUOpInfo(mcuId);
+
             response.setDuiplicateMCU(false);
             response.setActionComplete(true);
         }
@@ -50,6 +59,7 @@ public class MaintainService {
         MCURemoveResponse response = new MCURemoveResponse();
 
         mMaintainDao.removeMcu(mcuId);
+        mMCUOpInfoDao.removeMCUOpInfo(mcuId);
         response.setActionComplete(true);
 
         return response;
