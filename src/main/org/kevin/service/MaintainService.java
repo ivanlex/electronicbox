@@ -3,6 +3,7 @@ package org.kevin.service;
 import org.kevin.dao.MCUOpInfoDao;
 import org.kevin.dao.MaintainDao;
 import org.kevin.domain.MCUBasic;
+import org.kevin.domain.MCUOpInfo;
 import org.kevin.domain.reqres.web.MCUAddResponse;
 import org.kevin.domain.reqres.web.MCURemoveResponse;
 import org.kevin.domain.reqres.web.MCUStaticsResponse;
@@ -37,7 +38,7 @@ public class MaintainService {
         return mcus;
     }
 
-    public MCUAddResponse createAddMcu(String mcuId, String installedAddress){
+    public MCUAddResponse createAddMcu(String mcuId,String mcuDesc,String mcuGroup, String installedAddress){
         MCUAddResponse response = new MCUAddResponse();
 
         if(isExist(mcuId)){
@@ -46,7 +47,7 @@ public class MaintainService {
             return response;
         }
         else{
-            mMaintainDao.addNewMcu(mcuId,installedAddress,new Date());
+            mMaintainDao.addNewMcu(mcuId,mcuDesc,mcuGroup,installedAddress,new Date());
             mMCUOpInfoDao.addMCUOpInfo(mcuId);
 
             response.setDuiplicateMCU(false);
@@ -73,5 +74,17 @@ public class MaintainService {
         response.setOnlineMCU(mMaintainDao.countOnlineMCU(1));
 
         return response;
+    }
+
+    public List<MCUOpInfo> getMCUTopStatics()
+    {
+        List<MCUOpInfo> mcuOpInfos = mMCUOpInfoDao.getTop5MCUStatus();
+
+        while(mcuOpInfos.size() < 5)
+        {
+            mcuOpInfos.add(new MCUOpInfo());
+        }
+
+        return mcuOpInfos;
     }
 }

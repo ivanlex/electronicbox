@@ -6,7 +6,25 @@ public class MCUBasic {
     Long mId;
     String mMcuId;
     String mAddress;
+    String mGroup;
+    String mDesc;
     Date mInstallDate;
+
+    public String getGroup() {
+        return mGroup;
+    }
+
+    public void setGroup(String group) {
+        mGroup = group;
+    }
+
+    public String getDesc() {
+        return mDesc;
+    }
+
+    public void setDesc(String desc) {
+        mDesc = desc;
+    }
 
     public Long getId() {
         return mId;

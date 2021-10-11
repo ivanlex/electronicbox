@@ -1,6 +1,8 @@
 package org.kevin.web;
 
+import org.kevin.common.Commons;
 import org.kevin.domain.MCUBasic;
+import org.kevin.domain.MCUOpInfo;
 import org.kevin.domain.reqres.web.*;
 import org.kevin.service.MaintainService;
 import org.kevin.web.base.ControllerBase;
@@ -24,7 +26,11 @@ public class MaintainController extends ControllerBase {
 
     @RequestMapping(path = "mcuAdd",method = RequestMethod.POST)
     public MCUAddResponse addDevice(@RequestBody MCUAddRequest request){
-        return mMaintainService.createAddMcu(request.getDeviceId(),request.getDeviceAddress());
+        return mMaintainService.createAddMcu(
+                request.getDeviceId(),
+                request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc(),
+                request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup(),
+                request.getDeviceAddress());
     }
 
     @RequestMapping(path = "mcuRemove", method = RequestMethod.POST)
@@ -40,5 +46,11 @@ public class MaintainController extends ControllerBase {
     @RequestMapping(path = "mcuStatics", method = RequestMethod.POST)
     public MCUStaticsResponse getMCUStatics(){
         return mMaintainService.getMCUStatics();
+    }
+
+    @RequestMapping(path = "mcuTopStatics", method = RequestMethod.POST)
+    public List<MCUOpInfo> getTopMCU()
+    {
+        return mMaintainService.getMCUTopStatics();
     }
 }

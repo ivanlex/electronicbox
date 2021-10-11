@@ -13,7 +13,7 @@ import java.util.Date;
 @Repository
 public interface MCUHistoryDao {
 
-    @Select("select * from t_mcu_history_info where MCU_ID = #{mcuId}")
+    @Select("select * from t_mcu_history_info where MCU_ID = #{mcuId} order by Updated_Time desc")
     @Results(value = {
             @Result(property = "mcuId", column = "MCU_ID"),
             @Result(property = "openStatus", column = "Open_Status"), //空开状态
@@ -25,6 +25,6 @@ public interface MCUHistoryDao {
     })
     List<MCUHistoryInfo> getAllMCUHistoryInfo(String mcuId);
 
-    @Update("Insert into t_mcu_history_info (MCU_ID,Open_Status,Crack_Status,Lightning_Status,Grounded_Status,Lightning_Count,Updated_Time) VALUES (#{mcuId},#{openStatus},#{crackStatus},#{lightningStatus},#{groundedStatus}, #{lightningCount},#{updatedTime})")
+    @Insert("Insert into t_mcu_history_info (MCU_ID,Open_Status,Crack_Status,Lightning_Status,Grounded_Status,Lightning_Count,Updated_Time) VALUES (#{mcuId},#{openStatus},#{crackStatus},#{lightningStatus},#{groundedStatus}, #{lightningCount},#{updatedTime})")
     void insertMCUHistory(String mcuId, int openStatus, int crackStatus, int lightningStatus, int groundedStatus, int lightningCount, Date updatedTime);
 }

@@ -120,12 +120,15 @@ public class SocketService2 {
         {
 
             String mcuId = Integer.valueOf ((int)bytes[0]).toString();
-            System.out.println("MCUId:" +  mcuId + "Lightning count : " + bytes[5]);
+
             mMCUOpInfoDao.updateMCUOpInfo(mcuId,bytes[1],bytes[2],bytes[3],bytes[4],bytes[5],new Date());
             for(int i =1; i<bytes.length;i++){
                 if(bytes[i] != 0)
                 {
+                    System.out.println("MCUId:" +  mcuId + "1:" + bytes[1] + "2:" +
+                            bytes[2] + "3:" + bytes[3] + "4:" + bytes[4] + "5:" + bytes[5]);
                     mMCUHistoryDao.insertMCUHistory(mcuId,bytes[1],bytes[2],bytes[3],bytes[4],bytes[5],new Date());
+                    return;
                 }
             }
         }

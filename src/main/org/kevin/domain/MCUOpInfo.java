@@ -1,5 +1,13 @@
 package org.kevin.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 public class MCUOpInfo {
     Long mId;
     String mMcuId;
@@ -8,6 +16,24 @@ public class MCUOpInfo {
     int mLightningStatus;
     int mGroundedStatus;
     int mLightningCount;
+    Date mUpdateTime;
+    int mIsOnline;
+
+    public void setIsOnline(int isOnline) {
+        mIsOnline = isOnline;
+    }
+
+    public Date getUpdateTime() {
+        return mUpdateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        mUpdateTime = updateTime;
+    }
+
+    public int getIsOnline() {
+        return mIsOnline;
+    }
 
     public Long getId() {
         return mId;
