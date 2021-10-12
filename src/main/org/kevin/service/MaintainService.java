@@ -71,14 +71,14 @@ public class MaintainService {
         MCUStaticsResponse response = new MCUStaticsResponse();
 
         response.setInstalledMCU(mMaintainDao.countInstalledMCU());
-        response.setOnlineMCU(mMaintainDao.countOnlineMCU(1));
+        response.setOnlineMCU(mMaintainDao.countOnlineMCU(2));
 
         return response;
     }
 
     public List<MCUOpInfo> getMCUTopStatics()
     {
-        List<MCUOpInfo> mcuOpInfos = mMCUOpInfoDao.getTop5MCUStatus();
+        List<MCUOpInfo> mcuOpInfos = mMCUOpInfoDao.getTop5MCUStatus(2);
 
         while(mcuOpInfos.size() < 5)
         {
