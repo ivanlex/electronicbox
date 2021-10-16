@@ -114,7 +114,11 @@ public class SocketService2 {
 
     void onProcessMessage(byte[] bytes){
         if(bytes.length != 6) {
-            System.out.println("Message length is too low");
+            System.out.println("Message length is mismatch");
+            for(byte i : bytes){
+                System.out.print(i);
+            }
+            System.out.println();
         }
         else
         {
