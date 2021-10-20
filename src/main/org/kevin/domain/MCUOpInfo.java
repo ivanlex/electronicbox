@@ -11,6 +11,7 @@ import java.util.GregorianCalendar;
 public class MCUOpInfo {
     Long mId;
     String mMcuId;
+    String mDescription;
     int mOpenStatus;
     int mCrackStatus;
     int mLightningStatus;
@@ -18,6 +19,14 @@ public class MCUOpInfo {
     int mLightningCount;
     Date mUpdateTime;
     int mIsOnline;
+
+    public String getDescription() {
+        return mDescription;
+    }
+
+    public void setDescription(String description) {
+        mDescription = description;
+    }
 
     public void setIsOnline(int isOnline) {
         mIsOnline = isOnline;
