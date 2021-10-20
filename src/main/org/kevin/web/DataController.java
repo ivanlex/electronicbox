@@ -22,7 +22,7 @@ public class DataController extends ControllerBase {
         mMCUOpInfoDao = MCUOpInfoDao;
     }
 
-    @RequestMapping(path = "mCUOpInfo", method = RequestMethod.POST)
+        @RequestMapping(path = "mCUOpInfo", method = RequestMethod.POST)
     List<MCUOpInfo> getMCUOpInfo() {
         return mMCUOpInfoDao.getAllMCUOpInfo(2);
     }
