@@ -5,6 +5,24 @@ public class MCUAddRequest {
     String mDeviceAddress;
     String mDesc;
     String mGroup;
+    double mLongitude;
+    double mLatitude;
+
+    public double getLongitude() {
+        return mLongitude;
+    }
+
+    public void setLongitude(double longitude) {
+        mLongitude = longitude;
+    }
+
+    public double getLatitude() {
+        return mLatitude;
+    }
+
+    public void setLatitude(double latitude) {
+        mLatitude = latitude;
+    }
 
     public String getDesc() {
         return mDesc;

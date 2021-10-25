@@ -38,7 +38,7 @@ public class MaintainService {
         return mcus;
     }
 
-    public MCUAddResponse createAddMcu(String mcuId,String mcuDesc,String mcuGroup, String installedAddress){
+    public MCUAddResponse createAddMcu(String mcuId,String mcuDesc,String mcuGroup, String installedAddress,double longitude,double latitude){
         MCUAddResponse response = new MCUAddResponse();
 
         if(isExist(mcuId)){
@@ -47,7 +47,7 @@ public class MaintainService {
             return response;
         }
         else{
-            mMaintainDao.addNewMcu(mcuId,mcuDesc,mcuGroup,installedAddress,new Date());
+            mMaintainDao.addNewMcu(mcuId,mcuDesc,mcuGroup,installedAddress,longitude,latitude,new Date());
             mMCUOpInfoDao.addMCUOpInfo(mcuId);
 
             response.setDuiplicateMCU(false);

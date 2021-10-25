@@ -17,8 +17,8 @@ public interface MaintainDao {
     @Select("Select case when count(*) > 0 then 1 else 0 end from t_mcu_basic_info where MCU_ID = #{mcuId}")
     boolean isMcuExist(String mcuId);
 
-    @Insert("Insert into t_mcu_basic_info (MCU_ID, Description, Group_ID, Address,Install_Date) values (#{mcuId},#{mcuDesc},#{mcuGroup},#{installedAddress},#{installedDate})")
-    void addNewMcu(String mcuId,String mcuDesc,String mcuGroup, String installedAddress, Date installedDate);
+    @Insert("Insert into t_mcu_basic_info (MCU_ID, Description, Group_ID, Address,Longitude,Latitude,Install_Date) values (#{mcuId},#{mcuDesc},#{mcuGroup},#{installedAddress},#{longitude},#{latitude},#{installedDate})")
+    void addNewMcu(String mcuId,String mcuDesc,String mcuGroup, String installedAddress,double longitude,double latitude, Date installedDate);
 
     @Delete("Delete from t_mcu_basic_info where MCU_ID = #{mcuId}")
     void removeMcu(String mcuId);
@@ -35,6 +35,8 @@ public interface MaintainDao {
             @Result(property = "address",column = "Address"),
             @Result(property = "desc",column = "Description"),
             @Result(property = "group",column = "Group_ID"),
+            @Result(property = "latitude",column = "Latitude"),
+            @Result(property = "longitude",column = "Longitude"),
             @Result(property = "installDate",column = "Install_Date", javaType = java.util.Date.class,jdbcType= JdbcType.TIMESTAMP),
     })
     List<MCUBasic> getAllMcu();

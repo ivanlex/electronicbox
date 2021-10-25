@@ -30,7 +30,9 @@ public class MaintainController extends ControllerBase {
                 request.getDeviceId(),
                 request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc(),
                 request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup(),
-                request.getDeviceAddress());
+                request.getDeviceAddress(),
+                request.getLongitude(),
+                request.getLatitude());
     }
 
     @RequestMapping(path = "mcuRemove", method = RequestMethod.POST)

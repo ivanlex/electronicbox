@@ -8,7 +8,25 @@ public class MCUBasic {
     String mAddress;
     String mGroup;
     String mDesc;
+    double mLatitude;
+    double mLongitude;
     Date mInstallDate;
+
+    public double getLatitude() {
+        return mLatitude;
+    }
+
+    public void setLatitude(double latitude) {
+        mLatitude = latitude;
+    }
+
+    public double getLongitude() {
+        return mLongitude;
+    }
+
+    public void setLongitude(double longitude) {
+        mLongitude = longitude;
+    }
 
     public String getGroup() {
         return mGroup;
