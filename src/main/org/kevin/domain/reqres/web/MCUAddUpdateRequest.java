@@ -1,6 +1,6 @@
 package org.kevin.domain.reqres.web;
 
-public class MCUAddRequest {
+public class MCUAddUpdateRequest {
     String mDeviceId;
     String mDeviceAddress;
     String mDesc;

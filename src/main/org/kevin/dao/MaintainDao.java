@@ -20,6 +20,9 @@ public interface MaintainDao {
     @Insert("Insert into t_mcu_basic_info (MCU_ID, Description, Group_ID, Address,Longitude,Latitude,Install_Date) values (#{mcuId},#{mcuDesc},#{mcuGroup},#{installedAddress},#{longitude},#{latitude},#{installedDate})")
     void addNewMcu(String mcuId,String mcuDesc,String mcuGroup, String installedAddress,double longitude,double latitude, Date installedDate);
 
+    @Update("Update t_mcu_basic_info set Description = #{mcuDesc}, Group_ID = #{mcuGroup}, Address = #{installedAddress},Longitude = #{longitude},Latitude = #{latitude} where MCU_ID = #{mcuId}")
+    void updateMcu(String mcuId,String mcuDesc,String mcuGroup, String installedAddress,double longitude,double latitude);
+
     @Delete("Delete from t_mcu_basic_info where MCU_ID = #{mcuId}")
     void removeMcu(String mcuId);
 

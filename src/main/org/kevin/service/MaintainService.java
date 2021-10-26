@@ -4,7 +4,7 @@ import org.kevin.dao.MCUOpInfoDao;
 import org.kevin.dao.MaintainDao;
 import org.kevin.domain.MCUBasic;
 import org.kevin.domain.MCUOpInfo;
-import org.kevin.domain.reqres.web.MCUAddResponse;
+import org.kevin.domain.reqres.web.MCUAddUpdateResponse;
 import org.kevin.domain.reqres.web.MCURemoveResponse;
 import org.kevin.domain.reqres.web.MCUStaticsResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,8 +38,8 @@ public class MaintainService {
         return mcus;
     }
 
-    public MCUAddResponse createAddMcu(String mcuId,String mcuDesc,String mcuGroup, String installedAddress,double longitude,double latitude){
-        MCUAddResponse response = new MCUAddResponse();
+    public MCUAddUpdateResponse createAddMcu(String mcuId, String mcuDesc, String mcuGroup, String installedAddress, double longitude, double latitude){
+        MCUAddUpdateResponse response = new MCUAddUpdateResponse();
 
         if(isExist(mcuId)){
             response.setDuiplicateMCU(true);
@@ -53,6 +53,16 @@ public class MaintainService {
             response.setDuiplicateMCU(false);
             response.setActionComplete(true);
         }
+
+        return response;
+    }
+
+    public MCUAddUpdateResponse updateMcu(String mcuId, String mcuDesc, String mcuGroup, String installedAddress, double longitude, double latitude){
+        MCUAddUpdateResponse response = new MCUAddUpdateResponse();
+        mMaintainDao.updateMcu(mcuId,mcuDesc,mcuGroup,installedAddress,longitude,latitude);
+
+        response.setDuiplicateMCU(false);
+        response.setActionComplete(true);
 
         return response;
     }

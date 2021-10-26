@@ -25,8 +25,19 @@ public class MaintainController extends ControllerBase {
     }
 
     @RequestMapping(path = "mcuAdd",method = RequestMethod.POST)
-    public MCUAddResponse addDevice(@RequestBody MCUAddRequest request){
+    public MCUAddUpdateResponse addDevice(@RequestBody MCUAddUpdateRequest request){
         return mMaintainService.createAddMcu(
+                request.getDeviceId(),
+                request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc(),
+                request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup(),
+                request.getDeviceAddress(),
+                request.getLongitude(),
+                request.getLatitude());
+    }
+
+    @RequestMapping(path = "mcuUpdate",method = RequestMethod.POST)
+    public MCUAddUpdateResponse updateDevice(@RequestBody MCUAddUpdateRequest request){
+        return mMaintainService.updateMcu(
                 request.getDeviceId(),
                 request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc(),
                 request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup(),

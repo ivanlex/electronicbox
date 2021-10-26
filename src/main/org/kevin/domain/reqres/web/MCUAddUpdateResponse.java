@@ -1,6 +1,6 @@
 package org.kevin.domain.reqres.web;
 
-public class MCUAddResponse {
+public class MCUAddUpdateResponse {
     boolean mActionComplete;
     boolean mDuiplicateMCU;
 
