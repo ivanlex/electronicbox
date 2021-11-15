@@ -1,6 +1,5 @@
 package org.kevin.web;
 
-import org.jetbrains.annotations.NotNull;
 import org.kevin.domain.MCUHistoryInfo;
 import org.kevin.domain.reqres.web.HistoryRequest;
 import org.kevin.service.MCUHistoryService;
@@ -24,7 +23,7 @@ public class HistoryController extends ControllerBase {
     }
 
     @RequestMapping(path = "mcuHistory", method = RequestMethod.POST)
-    List<MCUHistoryInfo> mcuHistory(@NotNull @RequestBody HistoryRequest request)
+    List<MCUHistoryInfo> mcuHistory( @RequestBody HistoryRequest request)
     {
         List<MCUHistoryInfo> response =  mMCUHistoryService.getHistoryByDeviceId(request.getDeviceId());
         return response;

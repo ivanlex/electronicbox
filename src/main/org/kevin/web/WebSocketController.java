@@ -1,6 +1,5 @@
 package org.kevin.web;
 
-import org.jetbrains.annotations.NotNull;
 import org.kevin.websocket.HeartMessage;
 import org.kevin.websocket.HeartResponse;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -12,7 +11,7 @@ public class WebSocketController {
 
     @MessageMapping("/heart")
     @SendTo("/topic/heart")
-    public HeartResponse heart(@NotNull HeartMessage message) throws Exception
+    public HeartResponse heart(HeartMessage message) throws Exception
     {
         Thread.sleep(1000);
         return new HeartResponse(message.getClientId());
