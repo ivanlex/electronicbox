@@ -17,7 +17,6 @@
     <dependencyManagement>
         <dependencies>
 
-
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -65,6 +64,13 @@
                 <scope>import</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.jetbrains</groupId>
+                <artifactId>annotations</artifactId>
+                <version>RELEASE</version>
+                <scope>compile</scope>
+            </dependency>
+
             <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
             <dependency>
                 <groupId>com.google.code.gson</groupId>
@@ -99,6 +105,43 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>webjars-locator-core</artifactId>
+                <version>${locatorCore.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>sockjs-client</artifactId>
+                <version>${sockJsclient.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>stomp-websocket</artifactId>
+                <version>${stompWebsocket.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>bootstrap</artifactId>
+                <version>${bootstrap.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>jquery</artifactId>
+                <version>${jquery.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
 
 
         </dependencies>
@@ -179,6 +222,31 @@
             <version>${mybatis.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>webjars-locator-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>sockjs-client</artifactId>
+            <version>${sockJsclient.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>stomp-websocket</artifactId>
+            <version>${stompWebsocket.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>${bootstrap.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>${jquery.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -205,5 +273,10 @@
         <mybatis.version>2.1.2</mybatis.version>
         <commonCodec.version>1.14</commonCodec.version>
         <apacheCommon.version>3.9</apacheCommon.version>
+        <sockJsclient.version>1.0.2</sockJsclient.version>
+        <stompWebsocket.version>2.3.3</stompWebsocket.version>
+        <bootstrap.version>3.3.7</bootstrap.version>
+        <jquery.version>3.1.1-1</jquery.version>
+        <locatorCore.version>0.35</locatorCore.version>
     </properties>
 </project>
