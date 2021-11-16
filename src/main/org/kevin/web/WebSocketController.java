@@ -9,8 +9,8 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class WebSocketController {
 
-    @MessageMapping("/heart")
-    @SendTo("/topic/heart")
+    @MessageMapping("/heartbeat")
+    @SendTo("/topic/heartbeat")
     public HeartResponse heart(HeartMessage message) throws Exception
     {
         Thread.sleep(1000);

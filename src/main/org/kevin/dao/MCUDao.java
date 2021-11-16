@@ -10,14 +10,14 @@ import java.util.List;
 @Repository
 public interface MCUDao {
 
-    @Select("select * from t_MCU")
+    @Select("select * from t_mcu")
     @Results({
             @Result(property = "mcuID", column = "MCU_ID"),
             @Result(property = "mcuToken", column = "MCU_Token")
     })
     List<MCU> getAll();
 
-    @Update({"update t_User set user_name = #{userName}"})
+    @Update({"update t_user set user_name = #{userName}"})
     void updateMCUStatus(MCU mcu);
 
     MCU getMCUByMCUID(String mcuId);
