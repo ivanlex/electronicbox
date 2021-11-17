@@ -7,6 +7,8 @@ import org.kevin.domain.reqres.web.LoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 import static org.kevin.common.Commons.TEST_TOKEN;
 
 @Service
@@ -28,6 +30,14 @@ public class LoginService2 {
         return new LoginResponse(Commons.EMPTY_STRING);
     }
 
+    public void updateWSSessionId(String token, String sessionId)
+    {
+        if (mUserDao.validateToken(token))
+        {
+            mUserDao.updateWSSessionId(token, sessionId, new Date());
+        }
+    }
+
     private User findUserByPwd(String username,String password){
         User user = mUserDao.getUserByPWD(username,password);
         return user;
@@ -37,6 +47,8 @@ public class LoginService2 {
         user.setLoginToken(TEST_TOKEN);
         mUserDao.updateToken(user,TEST_TOKEN);
     }
+
+
 
 
 

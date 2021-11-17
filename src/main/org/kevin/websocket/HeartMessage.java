@@ -1,13 +1,13 @@
 package org.kevin.websocket;
 
 public class HeartMessage {
-    String mClientId;
+    private String mToken;
 
-    public String getClientId() {
-        return mClientId;
+    public String getToken() {
+        return mToken;
     }
 
-    public void setClientId(String clientId) {
-        this.mClientId = clientId;
+    public void setToken(String token) {
+        this.mToken = token;
     }
 }
