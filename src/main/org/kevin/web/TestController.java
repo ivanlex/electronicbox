@@ -3,6 +3,9 @@ package org.kevin.web;
 import com.mysql.cj.protocol.PacketReceivedTimeHolder;
 import org.kevin.dao.MCUOpInfoDao;
 import org.kevin.domain.MCU;
+import org.kevin.web.base.ControllerBase;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessageType;
@@ -16,7 +19,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-public class TestController {
+public class TestController extends ControllerBase {
     MCUOpInfoDao mMCUOpInfoDao;
     SimpMessagingTemplate mSimpMessagingTemplate;
 
@@ -47,5 +50,7 @@ public class TestController {
                 "/topic/heartbeat",
                 "test",
                 headerAccessor.getMessageHeaders());
+
+        mCommonUtility.getLogger().error("Test API with WebSocket");
     }
 }

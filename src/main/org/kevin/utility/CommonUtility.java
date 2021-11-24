@@ -4,7 +4,12 @@ import org.kevin.domain.MCU;
 import org.kevin.service.interfaces.IRequest;
 import org.kevin.system.SystemConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 
@@ -71,5 +76,10 @@ public class CommonUtility {
 
 
         return requestTypeCheck && endSymbolCheck && dataIntegrityCheck;
+    }
+
+    public Logger getLogger(){
+        Logger logger = LogManager.getRootLogger();
+        return logger;
     }
 }

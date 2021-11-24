@@ -3,6 +3,7 @@ package org.kevin.service;
 import org.kevin.common.Commons;
 import org.kevin.dao.MCUDao;
 import org.kevin.domain.MCU;
+import org.kevin.service.base.ServiceBase;
 import org.kevin.service.interfaces.DataServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class DataService implements DataServiceInterface {
+public class DataService extends ServiceBase implements DataServiceInterface {
 
     LoginService mLoginService;
     MCUDao mMCUDao;

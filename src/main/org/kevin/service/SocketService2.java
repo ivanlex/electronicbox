@@ -2,6 +2,7 @@ package org.kevin.service;
 
 import org.kevin.dao.MCUHistoryDao;
 import org.kevin.dao.MCUOpInfoDao;
+import org.kevin.service.base.ServiceBase;
 import org.kevin.service.interfaces.IRequest;
 import org.kevin.service.interfaces.IResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 @Service
-public class SocketService2 {
+public class SocketService2 extends ServiceBase {
     MCUOpInfoDao mMCUOpInfoDao;
     MCUHistoryDao mMCUHistoryDao;
 

@@ -24,6 +24,9 @@ public class DataController extends ControllerBase {
 
         @RequestMapping(path = "mCUOpInfo", method = RequestMethod.POST)
     List<MCUOpInfo> getMCUOpInfo() {
+        mCommonUtility.getLogger().info("API:{}",
+                    "mCUOpInfo");
+
         return mMCUOpInfoDao.getAllMCUOpInfo(2);
     }
 }

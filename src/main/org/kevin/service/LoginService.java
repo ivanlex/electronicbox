@@ -7,6 +7,7 @@ import org.kevin.domain.*;
 import org.kevin.domain.reqres.mcu.LoginPayLoadFactory;
 import org.kevin.domain.reqres.mcu.LoginPayload;
 import org.kevin.domain.MCU;
+import org.kevin.service.base.ServiceBase;
 import org.kevin.service.interfaces.LoginServiceInterface;
 import org.kevin.utility.MD5Utility;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Date;
 
 @Service
-public class LoginService implements LoginServiceInterface {
+public class LoginService extends ServiceBase implements LoginServiceInterface {
 
     UserDao mUserDao;
     MCUDao mMCUDao;
@@ -40,10 +41,7 @@ public class LoginService implements LoginServiceInterface {
 
         MCU mcu = mMCUDao.getMCUByMCUID(mcuInfo.getMCUId());
 
-        if (mcu != null)
-            return true;
-
-        return false;
+        return mcu != null;
     }
 
     @Transactional(isolation = Isolation.READ_COMMITTED)
@@ -94,9 +92,7 @@ public class LoginService implements LoginServiceInterface {
 
     public boolean isUserTokenExist(String userToken, String userPwd) {
         User user = mUserDao.validateUserTokenPWD(userToken, userPwd);
-        if (user != null)
-            return true;
-        return false;
+        return user != null;
     }
 
     public boolean isUserTokenLocked(String userToken, String userPwd) {

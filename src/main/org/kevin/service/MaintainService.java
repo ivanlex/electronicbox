@@ -7,6 +7,7 @@ import org.kevin.domain.MCUOpInfo;
 import org.kevin.domain.reqres.web.MCUAddUpdateResponse;
 import org.kevin.domain.reqres.web.MCURemoveResponse;
 import org.kevin.domain.reqres.web.MCUStaticsResponse;
+import org.kevin.service.base.ServiceBase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class MaintainService {
+public class MaintainService extends ServiceBase {
 
     MaintainDao mMaintainDao;
     MCUOpInfoDao mMCUOpInfoDao;

@@ -26,44 +26,80 @@ public class MaintainController extends ControllerBase {
 
     @RequestMapping(path = "mcuAdd",method = RequestMethod.POST)
     public MCUAddUpdateResponse addDevice(@RequestBody MCUAddUpdateRequest request){
+        String deviceId = request.getDeviceId();
+        String desc = request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc();
+        String group = request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup();
+        String deviceAddress = request.getDeviceAddress();
+        double longitude = request.getLongitude();
+        double latitude = request.getLatitude();
+
+
+        mCommonUtility.getLogger().info("API:{},deviceId:{},desc:{},group:{},deviceAddress:{},longitude:{},Latitude:{}",
+                "mcuAdd", deviceId, desc, group, deviceAddress, longitude,latitude);
+
         return mMaintainService.createAddMcu(
-                request.getDeviceId(),
-                request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc(),
-                request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup(),
-                request.getDeviceAddress(),
-                request.getLongitude(),
-                request.getLatitude());
+                deviceId,
+                desc,
+                group,
+                deviceAddress,
+                longitude,
+                latitude);
     }
 
     @RequestMapping(path = "mcuUpdate",method = RequestMethod.POST)
     public MCUAddUpdateResponse updateDevice(@RequestBody MCUAddUpdateRequest request){
+        String deviceId = request.getDeviceId();
+        String desc = request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc();
+        String group = request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup();
+        String deviceAddress = request.getDeviceAddress();
+        double longitude = request.getLongitude();
+        double latitude = request.getLatitude();
+
+        mCommonUtility.getLogger().info("API:{},deviceId:{},desc:{},group:{},deviceAddress:{},longitude:{},Latitude:{}",
+                "mcuUpdate", deviceId, desc, group, deviceAddress, longitude,latitude);
+
         return mMaintainService.updateMcu(
-                request.getDeviceId(),
-                request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc(),
-                request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup(),
-                request.getDeviceAddress(),
-                request.getLongitude(),
-                request.getLatitude());
+                deviceId,
+                desc,
+                group,
+                deviceAddress,
+                longitude,
+                latitude);
     }
 
     @RequestMapping(path = "mcuRemove", method = RequestMethod.POST)
     public MCURemoveResponse removeDevice(@RequestBody MCURemoveRequest request){
+        String deviceId = request.getDeviceId();
+
+        mCommonUtility.getLogger().info("API:{},deviceId:{}",
+                "mcuRemove", deviceId);
+
         return mMaintainService.removeMcu(request.getDeviceId());
     }
 
     @RequestMapping(path = "getAllMcu",method = RequestMethod.POST)
     public List<MCUBasic> getAllMCU(){
+
+        mCommonUtility.getLogger().info("API:{}",
+                "getAllMcu");
+
         return mMaintainService.getAllMCU();
     }
 
     @RequestMapping(path = "mcuStatics", method = RequestMethod.POST)
     public MCUStaticsResponse getMCUStatics(){
+        mCommonUtility.getLogger().info("API:{}",
+                "mcuStatics");
+
         return mMaintainService.getMCUStatics();
     }
 
     @RequestMapping(path = "mcuTopStatics", method = RequestMethod.POST)
     public List<MCUOpInfo> getTopMCU()
     {
+        mCommonUtility.getLogger().info("API:{}",
+                "mcuTopStatics");
+
         return mMaintainService.getMCUTopStatics();
     }
 }

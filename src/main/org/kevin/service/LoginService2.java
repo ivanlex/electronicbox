@@ -4,6 +4,7 @@ import org.kevin.common.Commons;
 import org.kevin.dao.UserDao2;
 import org.kevin.domain.User;
 import org.kevin.domain.reqres.web.LoginResponse;
+import org.kevin.service.base.ServiceBase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,7 @@ import java.util.Date;
 import static org.kevin.common.Commons.TEST_TOKEN;
 
 @Service
-public class LoginService2 {
+public class LoginService2 extends ServiceBase {
     UserDao2 mUserDao;
 
     @Autowired

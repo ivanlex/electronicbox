@@ -1,6 +1,7 @@
 package org.kevin.service;
 
 
+import org.kevin.service.base.ServiceBase;
 import org.kevin.service.interfaces.IRequest;
 import org.kevin.service.interfaces.IResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 @Service
-public class SocketService {
+public class SocketService extends ServiceBase {
 
     MCUSessionMgr mMCUSessionMgr;
 

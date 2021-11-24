@@ -1,0 +1,308 @@
+2021-11-24 22:34:20,356 INFO o.s.b.StartupInfoLogger [main] Starting Application on dev-ConceptD with PID 21288 (/home/dev/Projects/electronicbox/target/classes started by dev in /home/dev/Projects/electronicbox)
+2021-11-24 22:34:20,360 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-11-24 22:34:21,040 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8000 (http)
+2021-11-24 22:34:21,048 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-24 22:34:21,053 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2021-11-24 22:34:21,054 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-11-24 22:34:21,096 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-11-24 22:34:21,096 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 710 ms
+2021-11-24 22:34:21,328 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-11-24 22:34:21,330 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-11-24 22:34:21,345 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-11-24 22:34:21,364 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'brokerChannelExecutor'
+2021-11-24 22:34:21,494 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [public/index.html]
+2021-11-24 22:34:21,584 INFO o.s.c.l.CompositeLog [main] Starting...
+2021-11-24 22:34:21,584 INFO o.s.c.l.CompositeLog [main] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-11-24 22:34:21,585 INFO o.s.c.l.CompositeLog [main] Started.
+2021-11-24 22:34:21,589 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8000"]
+2021-11-24 22:34:21,599 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-24 22:34:21,601 INFO o.s.b.StartupInfoLogger [main] Started Application in 1.529 seconds (JVM running for 2.023)
+2021-11-24 22:34:22,488 INFO o.a.j.l.DirectJDKLog [http-nio-8000-exec-2] A cookie header was received [1637670300,1637756207; Hm_lvt_e8002ef3d9e0d8274b5b74cc4a027d08=1637157335,1637670300,1637756208; Hm_lpvt_e8002ef3d9e0d8274b5b74cc4a027d08=1637763919; Hm_lpvt_b97569d26a525941d8d163729d284198=1637763919] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-11-24 22:34:22,491 INFO o.a.j.l.DirectJDKLog [http-nio-8000-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-24 22:34:22,491 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-11-24 22:34:22,494 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Completed initialization in 3 ms
+2021-11-24 22:34:22,516 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-24 22:34:22,516 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
+2021-11-24 22:34:22,528 INFO c.z.h.HikariDataSource [http-nio-8000-exec-1] HikariPool-1 - Starting...
+2021-11-24 22:34:22,724 INFO c.z.h.HikariDataSource [http-nio-8000-exec-1] HikariPool-1 - Start completed.
+2021-11-24 22:34:24,810 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
+2021-11-24 22:34:24,810 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
+2021-11-24 22:34:26,863 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-24 22:34:26,864 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuTopStatics
+2021-11-24 22:34:28,885 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
+2021-11-24 22:34:28,888 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-24 22:34:30,920 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuStatics
+2021-11-24 22:34:30,921 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuTopStatics
+2021-11-24 22:34:32,931 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
+2021-11-24 22:34:32,931 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-24 22:34:34,949 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
+2021-11-24 22:34:34,950 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
+2021-11-24 22:34:37,002 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
+2021-11-24 22:34:37,002 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
+2021-11-24 22:34:42,818 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuStatics
+2021-11-24 22:34:42,819 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuTopStatics
+2021-11-24 22:34:44,872 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
+2021-11-24 22:34:44,874 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-24 22:34:45,920 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 007
+2021-11-24 22:34:46,912 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
+2021-11-24 22:34:46,914 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
+2021-11-24 22:34:57,704 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
+2021-11-24 22:35:02,712 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 007
+2021-11-24 22:35:02,713 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 010
+2021-11-24 22:35:02,782 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:03,469 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
+2021-11-24 22:35:04,130 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
+2021-11-24 22:35:04,348 ERROR o.k.w.TestController [http-nio-8000-exec-4] Test API with WebSocket
+2021-11-24 22:35:04,552 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
+2021-11-24 22:35:04,735 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:04,912 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
+2021-11-24 22:35:05,079 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:05,226 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
+2021-11-24 22:35:05,436 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:05,608 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
+2021-11-24 22:35:05,798 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
+2021-11-24 22:35:06,007 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
+2021-11-24 22:35:06,201 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:06,398 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:06,830 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:07,023 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
+2021-11-24 22:35:07,199 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
+2021-11-24 22:35:07,382 ERROR o.k.w.TestController [http-nio-8000-exec-1] Test API with WebSocket
+2021-11-24 22:35:07,557 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:07,710 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:07,790 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 007
+2021-11-24 22:35:07,790 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 010
+2021-11-24 22:35:08,472 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
+2021-11-24 22:35:08,472 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
+2021-11-24 22:35:09,133 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 010
+2021-11-24 22:35:09,133 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 007
+2021-11-24 22:35:09,351 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 010
+2021-11-24 22:35:09,351 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 007
+2021-11-24 22:35:09,554 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 007
+2021-11-24 22:35:09,555 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 010
+2021-11-24 22:35:09,738 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 010
+2021-11-24 22:35:09,738 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 007
+2021-11-24 22:35:09,915 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 010
+2021-11-24 22:35:09,915 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 007
+2021-11-24 22:35:09,978 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
+2021-11-24 22:35:10,081 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 007
+2021-11-24 22:35:10,082 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 010
+2021-11-24 22:35:10,141 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:10,230 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 007
+2021-11-24 22:35:10,230 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 010
+2021-11-24 22:35:10,299 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:10,439 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
+2021-11-24 22:35:10,439 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
+2021-11-24 22:35:10,444 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:10,611 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 010
+2021-11-24 22:35:10,611 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 007
+2021-11-24 22:35:10,800 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 010
+2021-11-24 22:35:10,800 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 007
+2021-11-24 22:35:10,889 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
+2021-11-24 22:35:11,016 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
+2021-11-24 22:35:11,205 ERROR o.k.w.TestController [http-nio-8000-exec-1] Test API with WebSocket
+2021-11-24 22:35:11,382 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:11,520 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:11,723 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
+2021-11-24 22:35:11,892 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:12,060 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:12,192 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:12,397 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
+2021-11-24 22:35:12,534 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:12,747 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
+2021-11-24 22:35:12,791 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 007
+2021-11-24 22:35:12,791 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 010
+2021-11-24 22:35:12,925 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:13,109 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:13,293 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
+2021-11-24 22:35:13,474 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
+2021-11-24 22:35:13,474 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
+2021-11-24 22:35:13,479 ERROR o.k.w.TestController [http-nio-8000-exec-1] Test API with WebSocket
+2021-11-24 22:35:13,662 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:13,847 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:14,037 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
+2021-11-24 22:35:14,135 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 010
+2021-11-24 22:35:14,135 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 007
+2021-11-24 22:35:14,201 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
+2021-11-24 22:35:14,353 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 010
+2021-11-24 22:35:14,353 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 007
+2021-11-24 22:35:14,412 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:14,557 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 007
+2021-11-24 22:35:14,557 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 010
+2021-11-24 22:35:14,597 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:14,741 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 010
+2021-11-24 22:35:14,741 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 007
+2021-11-24 22:35:14,793 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
+2021-11-24 22:35:14,917 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 007
+2021-11-24 22:35:14,918 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 010
+2021-11-24 22:35:14,967 ERROR o.k.w.TestController [http-nio-8000-exec-1] Test API with WebSocket
+2021-11-24 22:35:15,083 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 007
+2021-11-24 22:35:15,083 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 010
+2021-11-24 22:35:15,164 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
+2021-11-24 22:35:15,232 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 007
+2021-11-24 22:35:15,232 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 010
+2021-11-24 22:35:15,338 ERROR o.k.w.TestController [http-nio-8000-exec-4] Test API with WebSocket
+2021-11-24 22:35:15,440 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
+2021-11-24 22:35:15,440 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
+2021-11-24 22:35:15,557 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
+2021-11-24 22:35:15,613 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 010
+2021-11-24 22:35:15,613 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 007
+2021-11-24 22:35:15,765 ERROR o.k.w.TestController [http-nio-8000-exec-1] Test API with WebSocket
+2021-11-24 22:35:15,802 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 010
+2021-11-24 22:35:15,802 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 007
+2021-11-24 22:35:15,948 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
+2021-11-24 22:35:16,885 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:17,056 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
+2021-11-24 22:35:17,261 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
+2021-11-24 22:35:17,423 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:17,621 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
+2021-11-24 22:35:17,781 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
+2021-11-24 22:35:17,792 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 007
+2021-11-24 22:35:17,792 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 010
+2021-11-24 22:35:17,988 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:18,172 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
+2021-11-24 22:35:18,370 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
+2021-11-24 22:35:18,476 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
+2021-11-24 22:35:18,476 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
+2021-11-24 22:35:18,515 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
+2021-11-24 22:35:18,724 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:18,918 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
+2021-11-24 22:35:19,101 ERROR o.k.w.TestController [http-nio-8000-exec-4] Test API with WebSocket
+2021-11-24 22:35:19,136 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 007
+2021-11-24 22:35:19,136 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 010
+2021-11-24 22:35:19,292 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:19,355 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 007
+2021-11-24 22:35:19,355 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 010
+2021-11-24 22:35:19,467 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
+2021-11-24 22:35:19,558 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 010
+2021-11-24 22:35:19,558 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 007
+2021-11-24 22:35:19,653 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
+2021-11-24 22:35:19,742 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 010
+2021-11-24 22:35:19,742 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 007
+2021-11-24 22:35:19,800 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:19,919 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 007
+2021-11-24 22:35:19,919 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 010
+2021-11-24 22:35:20,012 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:20,085 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 007
+2021-11-24 22:35:20,085 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 010
+2021-11-24 22:35:20,182 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
+2021-11-24 22:35:20,233 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 010
+2021-11-24 22:35:20,233 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 007
+2021-11-24 22:35:20,396 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
+2021-11-24 22:35:20,441 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
+2021-11-24 22:35:20,441 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
+2021-11-24 22:35:20,585 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
+2021-11-24 22:35:20,614 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 010
+2021-11-24 22:35:20,614 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 007
+2021-11-24 22:35:20,771 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
+2021-11-24 22:35:20,802 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 010
+2021-11-24 22:35:20,802 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 007
+2021-11-24 22:35:20,966 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
+2021-11-24 22:35:21,130 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:21,364 INFO o.s.w.s.c.WebSocketMessageBrokerStats [MessageBroker-8] WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 24, queued tasks = 182, completed tasks = 280], outboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 159], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 9]
+2021-11-24 22:35:22,793 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 010
+2021-11-24 22:35:22,793 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 007
+2021-11-24 22:35:23,121 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
+2021-11-24 22:35:23,477 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 007
+2021-11-24 22:35:23,477 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 010
+2021-11-24 22:35:24,136 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 007
+2021-11-24 22:35:24,136 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 010
+2021-11-24 22:35:24,356 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 010
+2021-11-24 22:35:24,356 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 007
+2021-11-24 22:35:24,559 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 007
+2021-11-24 22:35:24,559 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 010
+2021-11-24 22:35:24,743 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 007
+2021-11-24 22:35:24,743 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 010
+2021-11-24 22:35:24,920 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 007
+2021-11-24 22:35:24,920 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 010
+2021-11-24 22:35:25,086 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 010
+2021-11-24 22:35:25,086 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 007
+2021-11-24 22:35:25,233 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 007
+2021-11-24 22:35:25,233 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 010
+2021-11-24 22:35:25,442 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
+2021-11-24 22:35:25,442 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
+2021-11-24 22:35:25,615 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 010
+2021-11-24 22:35:25,615 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 007
+2021-11-24 22:35:25,803 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 007
+2021-11-24 22:35:25,803 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 010
+2021-11-24 22:35:27,505 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
+2021-11-24 22:35:27,795 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 010
+2021-11-24 22:35:27,795 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 007
+2021-11-24 22:35:28,479 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
+2021-11-24 22:35:28,479 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
+2021-11-24 22:35:29,138 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 007
+2021-11-24 22:35:29,138 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 010
+2021-11-24 22:35:29,357 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 007
+2021-11-24 22:35:29,357 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 010
+2021-11-24 22:35:29,561 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 007
+2021-11-24 22:35:29,561 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 010
+2021-11-24 22:35:29,745 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 007
+2021-11-24 22:35:29,745 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 010
+2021-11-24 22:35:29,922 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 010
+2021-11-24 22:35:29,922 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 007
+2021-11-24 22:35:30,088 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 010
+2021-11-24 22:35:30,088 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 007
+2021-11-24 22:35:30,235 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 007
+2021-11-24 22:35:30,235 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 010
+2021-11-24 22:35:30,444 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
+2021-11-24 22:35:30,444 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
+2021-11-24 22:35:30,617 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 007
+2021-11-24 22:35:30,617 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 010
+2021-11-24 22:35:30,805 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 007
+2021-11-24 22:35:30,805 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 010
+2021-11-24 22:35:32,797 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 007
+2021-11-24 22:35:32,797 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 010
+2021-11-24 22:35:33,469 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
+2021-11-24 22:35:33,481 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
+2021-11-24 22:35:33,481 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
+2021-11-24 22:35:34,140 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 010
+2021-11-24 22:35:34,140 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 007
+2021-11-24 22:35:34,359 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 007
+2021-11-24 22:35:34,359 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 010
+2021-11-24 22:35:34,563 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 007
+2021-11-24 22:35:34,563 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 010
+2021-11-24 22:35:34,747 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 007
+2021-11-24 22:35:34,747 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 010
+2021-11-24 22:35:34,924 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 010
+2021-11-24 22:35:34,924 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 007
+2021-11-24 22:35:35,090 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 010
+2021-11-24 22:35:35,090 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 007
+2021-11-24 22:35:35,236 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 007
+2021-11-24 22:35:35,236 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 010
+2021-11-24 22:35:35,446 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
+2021-11-24 22:35:35,446 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
+2021-11-24 22:35:35,618 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 007
+2021-11-24 22:35:35,619 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 010
+2021-11-24 22:35:35,807 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 010
+2021-11-24 22:35:35,807 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 007
+2021-11-24 22:35:37,799 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 007
+2021-11-24 22:35:37,799 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 010
+2021-11-24 22:35:38,405 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
+2021-11-24 22:35:38,482 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
+2021-11-24 22:35:38,482 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
+2021-11-24 22:35:39,142 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 007
+2021-11-24 22:35:39,142 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 010
+2021-11-24 22:35:39,360 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 010
+2021-11-24 22:35:39,360 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 007
+2021-11-24 22:35:39,564 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 010
+2021-11-24 22:35:39,564 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 007
+2021-11-24 22:35:39,748 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 010
+2021-11-24 22:35:39,748 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 007
+2021-11-24 22:35:39,925 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 007
+2021-11-24 22:35:39,925 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 010
+2021-11-24 22:35:40,091 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 010
+2021-11-24 22:35:40,091 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 007
+2021-11-24 22:35:40,237 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 010
+2021-11-24 22:35:40,237 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 007
+2021-11-24 22:35:43,413 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 007
+2021-11-24 22:35:43,414 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 010
+2021-11-24 22:35:43,572 INFO o.s.c.l.CompositeLog [Thread-5] Stopping...
+2021-11-24 22:35:43,572 INFO o.s.c.l.CompositeLog [Thread-5] BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-11-24 22:35:43,572 INFO o.s.c.l.CompositeLog [Thread-5] Stopped.
+2021-11-24 22:35:43,573 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'brokerChannelExecutor'
+2021-11-24 22:35:43,574 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2021-11-24 22:35:43,576 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2021-11-24 22:35:43,577 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'clientInboundChannelExecutor'
+2021-11-24 22:35:43,582 INFO c.z.h.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2021-11-24 22:35:43,589 INFO c.z.h.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
