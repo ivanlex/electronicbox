@@ -23,6 +23,6 @@ public class DataController extends ControllerBase {
         mCommonUtility.getLogger().info("API:{}",
                     "mCUOpInfo");
 
-        return mMCUOpInfoDao.getAllMCUOpInfo(2);
+        return mMCUOpInfoDao.getAllMCUOpInfo(2, userId);
     }
 }

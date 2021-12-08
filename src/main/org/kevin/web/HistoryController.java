@@ -25,7 +25,7 @@ public class HistoryController extends ControllerBase {
         mCommonUtility.getLogger().info("API:{}",
                 "mcuHistory");
 
-        List<MCUHistoryInfo> response =  mMCUHistoryService.getHistoryByDeviceId(request.getDeviceId());
+        List<MCUHistoryInfo> response =  mMCUHistoryService.getHistoryByDeviceId(request.getDeviceId(), userId);
         return response;
     }
 }

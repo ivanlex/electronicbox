@@ -14,7 +14,8 @@ import java.util.List;
 public interface MCUOpInfoDao {
 
     @Select("select *, case when NOW() - Update_Time <  300 * #{minute} then 1 else 0 end as 'Is_Online'" +
-            " from t_mcu_op_info as opInfo join t_mcu_basic_info as basicInfo on opInfo.MCU_ID = basicInfo.MCU_ID")
+            " from t_mcu_op_info as opInfo join t_mcu_basic_info as basicInfo on opInfo.MCU_ID = basicInfo.MCU_ID" +
+            " where UserId = #{userId}")
     @Results({
             @Result(property = "mcuId", column = "MCU_ID"),
             @Result(property = "description", column = "Description"),
@@ -26,9 +27,12 @@ public interface MCUOpInfoDao {
             @Result(property = "lightningCount", column = "Lightning_Count"), //雷击次数
             @Result(property = "updateTime",column = "Update_Time",javaType = java.util.Date.class,jdbcType = JdbcType.TIMESTAMP), //最后更新时间
     })
-    List<MCUOpInfo> getAllMCUOpInfo(int minute);
+    List<MCUOpInfo> getAllMCUOpInfo(int minute,String userId);
 
-    @Select("Select *, case when NOW() - Update_Time <  300 * #{minute} then 1 else 0 end as 'Is_Online' from t_mcu_op_info where CONVERT(MCU_ID, UNSIGNED INTEGER) <= 5 order by CONVERT(MCU_ID, UNSIGNED INTEGER)")
+    @Select("Select *, case when NOW() - Update_Time <  300 * #{minute} then 1 else 0 end as 'Is_Online'" +
+            " from t_mcu_op_info as mcuOpInfo join t_mcu_basic_info as mcuBasicInfo on mcuOpInfo.MCU_ID = mcuBasicInfo.MCU_ID" +
+            " where CONVERT(MCU_ID, UNSIGNED INTEGER) <= 5 and mcuBasicInfo.User_ID = #{userId}" +
+            " order by CONVERT(MCU_ID, UNSIGNED INTEGER)")
     @Results({
             @Result(property = "mcuId", column = "MCU_ID"),
             @Result(property = "isOnline", column = "Is_Online"),
@@ -39,7 +43,7 @@ public interface MCUOpInfoDao {
             @Result(property = "lightningCount", column = "Lightning_Count"), //雷击次数
             @Result(property = "updateTime",column = "Update_Time",javaType = java.util.Date.class,jdbcType = JdbcType.TIMESTAMP), //最后更新时间
     })
-    List<MCUOpInfo> getTop5MCUStatus(int minute);
+    List<MCUOpInfo> getTop5MCUStatus(int minute,String userId);
 
     @Update("Update t_mcu_op_info set Open_Status = #{openStatus},Crack_Status=#{crackStatus},Lightning_Status=#{lightningStatus},Grounded_Status=#{groundedStatus},Lightning_Count =#{lightningCount},Update_Time=#{updateTime} where MCU_ID = #{mcuId}")
     void updateMCUOpInfo(String mcuId, int openStatus, int crackStatus, int lightningStatus, int groundedStatus, int lightningCount, Date updateTime);

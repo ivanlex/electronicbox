@@ -18,9 +18,9 @@ public class MCUHistoryService extends ServiceBase {
         mMCUHistoryDao = MCUHistoryDao;
     }
 
-    public List<MCUHistoryInfo> getHistoryByDeviceId(String deviceId)
+    public List<MCUHistoryInfo> getHistoryByDeviceId(String deviceId,String userId)
     {
-       return mMCUHistoryDao.getAllMCUHistoryInfo(deviceId);
+       return mMCUHistoryDao.getAllMCUHistoryInfo(deviceId, userId);
     }
 
 

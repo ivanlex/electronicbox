@@ -32,7 +32,7 @@ public class MaintainController extends ControllerBase {
 
 
         mCommonUtility.getLogger().info("API:{},deviceId:{},desc:{},group:{},deviceAddress:{},longitude:{},Latitude:{}",
-                "mcuAdd", deviceId, desc, group, deviceAddress, longitude,latitude);
+                "mcuAdd/" + userId, deviceId, desc, group, deviceAddress, longitude,latitude);
 
         return mMaintainService.createAddMcu(
                 deviceId,
@@ -40,7 +40,8 @@ public class MaintainController extends ControllerBase {
                 group,
                 deviceAddress,
                 longitude,
-                latitude);
+                latitude,
+                userId);
     }
 
     @RequestMapping(path = "mcuUpdate/{userId}/",method = RequestMethod.POST)
@@ -53,7 +54,7 @@ public class MaintainController extends ControllerBase {
         double latitude = request.getLatitude();
 
         mCommonUtility.getLogger().info("API:{},deviceId:{},desc:{},group:{},deviceAddress:{},longitude:{},Latitude:{}",
-                "mcuUpdate", deviceId, desc, group, deviceAddress, longitude,latitude);
+                "mcuUpdate/" + userId, deviceId, desc, group, deviceAddress, longitude,latitude);
 
         return mMaintainService.updateMcu(
                 deviceId,
@@ -61,7 +62,8 @@ public class MaintainController extends ControllerBase {
                 group,
                 deviceAddress,
                 longitude,
-                latitude);
+                latitude,
+                userId);
     }
 
     @RequestMapping(path = "mcuRemove/{userId}", method = RequestMethod.POST)
@@ -69,34 +71,34 @@ public class MaintainController extends ControllerBase {
         String deviceId = request.getDeviceId();
 
         mCommonUtility.getLogger().info("API:{},deviceId:{}",
-                "mcuRemove", deviceId);
+                "mcuRemove/" + userId, deviceId);
 
-        return mMaintainService.removeMcu(request.getDeviceId());
+        return mMaintainService.removeMcu(request.getDeviceId(),userId);
     }
 
-    @RequestMapping(path = "getAllMcu",method = RequestMethod.POST)
-    public List<MCUBasic> getAllMCU(){
+    @RequestMapping(path = "getAllMcu/{userId}",method = RequestMethod.POST)
+    public List<MCUBasic> getAllMCU(@PathVariable("userId") String userId){
 
         mCommonUtility.getLogger().info("API:{}",
-                "getAllMcu");
+                "getAllMcu/" + userId);
 
-        return mMaintainService.getAllMCU();
+        return mMaintainService.getAllMCU(userId);
     }
 
-    @RequestMapping(path = "mcuStatics", method = RequestMethod.POST)
-    public MCUStaticsResponse getMCUStatics(){
+    @RequestMapping(path = "mcuStatics/{userId}", method = RequestMethod.POST)
+    public MCUStaticsResponse getMCUStatics(@PathVariable String userId){
         mCommonUtility.getLogger().info("API:{}",
-                "mcuStatics");
+                "mcuStatics/" + userId);
 
-        return mMaintainService.getMCUStatics();
+        return mMaintainService.getMCUStatics(userId);
     }
 
-    @RequestMapping(path = "mcuTopStatics", method = RequestMethod.POST)
-    public List<MCUOpInfo> getTopMCU()
+    @RequestMapping(path = "mcuTopStatics/{userId}", method = RequestMethod.POST)
+    public List<MCUOpInfo> getTopMCU(@PathVariable("userId") String userId)
     {
         mCommonUtility.getLogger().info("API:{}",
-                "mcuTopStatics");
+                "mcuTopStatics/" + userId);
 
-        return mMaintainService.getMCUTopStatics();
+        return mMaintainService.getMCUTopStatics(userId);
     }
 }

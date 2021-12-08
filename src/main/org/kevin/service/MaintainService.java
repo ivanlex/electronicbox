@@ -34,12 +34,12 @@ public class MaintainService extends ServiceBase {
         mMCUOpInfoDao = MCUOpInfoDao;
     }
 
-    public List<MCUBasic> getAllMCU(){
-        List<MCUBasic> mcus =  mMaintainDao.getAllMcu();
+    public List<MCUBasic> getAllMCU(String userId){
+        List<MCUBasic> mcus =  mMaintainDao.getAllMcu(userId);
         return mcus;
     }
 
-    public MCUAddUpdateResponse createAddMcu(String mcuId, String mcuDesc, String mcuGroup, String installedAddress, double longitude, double latitude){
+    public MCUAddUpdateResponse createAddMcu(String mcuId, String mcuDesc, String mcuGroup, String installedAddress, double longitude, double latitude, String userId){
         MCUAddUpdateResponse response = new MCUAddUpdateResponse();
 
         if(isExist(mcuId)){
@@ -48,7 +48,7 @@ public class MaintainService extends ServiceBase {
             return response;
         }
         else{
-            mMaintainDao.addNewMcu(mcuId,mcuDesc,mcuGroup,installedAddress,longitude,latitude,new Date());
+            mMaintainDao.addNewMcu(mcuId,mcuDesc,mcuGroup,installedAddress,longitude,latitude,new Date(),userId);
             mMCUOpInfoDao.addMCUOpInfo(mcuId);
 
             response.setDuiplicateMCU(false);
@@ -58,9 +58,9 @@ public class MaintainService extends ServiceBase {
         return response;
     }
 
-    public MCUAddUpdateResponse updateMcu(String mcuId, String mcuDesc, String mcuGroup, String installedAddress, double longitude, double latitude){
+    public MCUAddUpdateResponse updateMcu(String mcuId, String mcuDesc, String mcuGroup, String installedAddress, double longitude, double latitude, String userId){
         MCUAddUpdateResponse response = new MCUAddUpdateResponse();
-        mMaintainDao.updateMcu(mcuId,mcuDesc,mcuGroup,installedAddress,longitude,latitude);
+        mMaintainDao.updateMcu(mcuId,mcuDesc,mcuGroup,installedAddress,longitude,latitude,userId);
 
         response.setDuiplicateMCU(false);
         response.setActionComplete(true);
@@ -68,28 +68,28 @@ public class MaintainService extends ServiceBase {
         return response;
     }
 
-    public MCURemoveResponse removeMcu(String mcuId){
+    public MCURemoveResponse removeMcu(String mcuId,String userId){
         MCURemoveResponse response = new MCURemoveResponse();
 
-        mMaintainDao.removeMcu(mcuId);
+        mMaintainDao.removeMcu(mcuId,userId);
         mMCUOpInfoDao.removeMCUOpInfo(mcuId);
         response.setActionComplete(true);
 
         return response;
     }
 
-    public MCUStaticsResponse getMCUStatics(){
+    public MCUStaticsResponse getMCUStatics(String userId){
         MCUStaticsResponse response = new MCUStaticsResponse();
 
-        response.setInstalledMCU(mMaintainDao.countInstalledMCU());
-        response.setOnlineMCU(mMaintainDao.countOnlineMCU(2));
+        response.setInstalledMCU(mMaintainDao.countInstalledMCU(userId));
+        response.setOnlineMCU(mMaintainDao.countOnlineMCU(2,userId));
 
         return response;
     }
 
-    public List<MCUOpInfo> getMCUTopStatics()
+    public List<MCUOpInfo> getMCUTopStatics(String userId)
     {
-        List<MCUOpInfo> mcuOpInfos = mMCUOpInfoDao.getTop5MCUStatus(2);
+        List<MCUOpInfo> mcuOpInfos = mMCUOpInfoDao.getTop5MCUStatus(2,userId);
 
         while(mcuOpInfos.size() < 5)
         {
