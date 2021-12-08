@@ -21,8 +21,8 @@ public class MaintainController extends ControllerBase {
         mMaintainService = maintainService;
     }
 
-    @RequestMapping(path = "mcuAdd/{owner}/",method = RequestMethod.POST)
-    public MCUAddUpdateResponse addDevice(@RequestBody MCUAddUpdateRequest request, @PathVariable("owner") String owner){
+    @RequestMapping(path = "mcuAdd/{userId}/",method = RequestMethod.POST)
+    public MCUAddUpdateResponse addDevice(@RequestBody MCUAddUpdateRequest request, @PathVariable("userId") String userId){
         String deviceId = request.getDeviceId();
         String desc = request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc();
         String group = request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup();
@@ -43,8 +43,8 @@ public class MaintainController extends ControllerBase {
                 latitude);
     }
 
-    @RequestMapping(path = "mcuUpdate/{owner}/",method = RequestMethod.POST)
-    public MCUAddUpdateResponse updateDevice(@RequestBody MCUAddUpdateRequest request,@PathVariable("owner") String owner){
+    @RequestMapping(path = "mcuUpdate/{userId}/",method = RequestMethod.POST)
+    public MCUAddUpdateResponse updateDevice(@RequestBody MCUAddUpdateRequest request,@PathVariable("userId") String userId){
         String deviceId = request.getDeviceId();
         String desc = request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc();
         String group = request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup();
@@ -64,8 +64,8 @@ public class MaintainController extends ControllerBase {
                 latitude);
     }
 
-    @RequestMapping(path = "mcuRemove/{owner}", method = RequestMethod.POST)
-    public MCURemoveResponse removeDevice(@RequestBody MCURemoveRequest request,@PathVariable("owner") String owner){
+    @RequestMapping(path = "mcuRemove/{userId}", method = RequestMethod.POST)
+    public MCURemoveResponse removeDevice(@RequestBody MCURemoveRequest request,@PathVariable("userId") String userId){
         String deviceId = request.getDeviceId();
 
         mCommonUtility.getLogger().info("API:{},deviceId:{}",

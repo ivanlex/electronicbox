@@ -19,8 +19,8 @@ public class HistoryController extends ControllerBase {
         mMCUHistoryService = MCUHistoryService;
     }
 
-    @RequestMapping(path = "mcuHistory/{owner}", method = RequestMethod.POST)
-    List<MCUHistoryInfo> mcuHistory(@RequestBody HistoryRequest request, @PathVariable("owner") String owner)
+    @RequestMapping(path = "mcuHistory/{userId}", method = RequestMethod.POST)
+    List<MCUHistoryInfo> mcuHistory(@RequestBody HistoryRequest request, @PathVariable("userId") String userId)
     {
         mCommonUtility.getLogger().info("API:{}",
                 "mcuHistory");
