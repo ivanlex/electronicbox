@@ -1,23 +1,23 @@
 package org.kevin.service;
 
+import org.apache.logging.log4j.core.jackson.ContextDataAsEntryListSerializer;
 import org.kevin.dao.MCUHistoryDao;
 import org.kevin.dao.MCUOpInfoDao;
 import org.kevin.service.base.ServiceBase;
-import org.kevin.service.interfaces.IRequest;
-import org.kevin.service.interfaces.IResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+
+import static org.kevin.common.Commons.*;
 
 @Service
 public class SocketService2 extends ServiceBase {
@@ -69,7 +69,7 @@ public class SocketService2 extends ServiceBase {
                         //IResponse response = handleUseCase(new MCURequest(msg));
                         //if (response != null)
                         //sendMessage(socket, response);
-                        onProcessMessage(messages);
+                        onProcessMessageType2(messages);
                         socket.close();
                     }
                     catch (IOException e)
@@ -111,6 +111,68 @@ public class SocketService2 extends ServiceBase {
             e.printStackTrace();
         }
         return new byte[]{};
+    }
+
+
+
+    void onProcessMessageType2(byte[] packet){
+            if(!validatePackage(packet))
+                return;
+
+            String mcuId = Integer.valueOf ((int)packet[4]).toString();
+
+            mMCUOpInfoDao.updateMCUOpInfo(mcuId,packet[5],packet[6],packet[7],packet[8],packet[9],new Date());
+            for(int i =4; i<packet.length;i++){
+                if(packet[i] != 0)
+                {
+                    System.out.println("MCUId:" +  mcuId + "1:" + packet[5] + "2:" +
+                            packet[6] + "3:" + packet[7] + "4:" + packet[8] + "5:" + packet[9]);
+                    mMCUHistoryDao.insertMCUHistory(mcuId,packet[5],packet[6],packet[7],packet[8],packet[9],new Date());
+                    return;
+                }
+            }
+    }
+
+    boolean validatePackage(byte[] packet){
+        //Check length
+        if(packet.length != PACKET_LENGTH) {
+            System.out.println("Message length is mismatch");
+            for(byte i : packet){
+                System.out.print(i);
+            }
+            System.out.println();
+            return false;
+        }
+
+        int checksum = 0;
+
+        //Check header
+        for (int i = 0; i < PACKET_LENGTH; i++) {
+            if(i < HEADER_LENGTH)
+            {
+                if (packet[i] != HEADER[i]) {
+                    System.out.println("Header is not correct, drop package!");
+                    return false;
+                }
+            }
+            else if (i< PACKET_PAYLOAD)
+            {
+                checksum += packet[i];
+            }
+            else if (i < PACKET_CHECKSUM)
+            {
+                //checksum
+                if(checksum % 256 != packet[i])
+                    return false;
+                else
+                    break;
+            }
+        }
+
+        if(packet[PACKET_LENGTH - 1] != 0x16)
+            return false;
+
+        return true;
     }
 
     void onProcessMessage(byte[] bytes){

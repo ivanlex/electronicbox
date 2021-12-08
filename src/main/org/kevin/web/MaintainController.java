@@ -7,10 +7,7 @@ import org.kevin.domain.reqres.web.*;
 import org.kevin.service.MaintainService;
 import org.kevin.web.base.ControllerBase;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,8 +21,8 @@ public class MaintainController extends ControllerBase {
         mMaintainService = maintainService;
     }
 
-    @RequestMapping(path = "mcuAdd",method = RequestMethod.POST)
-    public MCUAddUpdateResponse addDevice(@RequestBody MCUAddUpdateRequest request){
+    @RequestMapping(path = "mcuAdd/{owner}/",method = RequestMethod.POST)
+    public MCUAddUpdateResponse addDevice(@RequestBody MCUAddUpdateRequest request, @PathVariable("owner") String owner){
         String deviceId = request.getDeviceId();
         String desc = request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc();
         String group = request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup();
@@ -46,8 +43,8 @@ public class MaintainController extends ControllerBase {
                 latitude);
     }
 
-    @RequestMapping(path = "mcuUpdate",method = RequestMethod.POST)
-    public MCUAddUpdateResponse updateDevice(@RequestBody MCUAddUpdateRequest request){
+    @RequestMapping(path = "mcuUpdate/{owner}/",method = RequestMethod.POST)
+    public MCUAddUpdateResponse updateDevice(@RequestBody MCUAddUpdateRequest request,@PathVariable("owner") String owner){
         String deviceId = request.getDeviceId();
         String desc = request.getDesc() == null ? Commons.EMPTY_STRING : request.getDesc();
         String group = request.getGroup() == null ? Commons.EMPTY_STRING : request.getGroup();
@@ -67,8 +64,8 @@ public class MaintainController extends ControllerBase {
                 latitude);
     }
 
-    @RequestMapping(path = "mcuRemove", method = RequestMethod.POST)
-    public MCURemoveResponse removeDevice(@RequestBody MCURemoveRequest request){
+    @RequestMapping(path = "mcuRemove/{owner}", method = RequestMethod.POST)
+    public MCURemoveResponse removeDevice(@RequestBody MCURemoveRequest request,@PathVariable("owner") String owner){
         String deviceId = request.getDeviceId();
 
         mCommonUtility.getLogger().info("API:{},deviceId:{}",

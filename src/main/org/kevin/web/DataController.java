@@ -5,10 +5,7 @@ import org.kevin.domain.MCU;
 import org.kevin.domain.MCUOpInfo;
 import org.kevin.web.base.ControllerBase;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,8 +19,8 @@ public class DataController extends ControllerBase {
         mMCUOpInfoDao = MCUOpInfoDao;
     }
 
-        @RequestMapping(path = "mCUOpInfo", method = RequestMethod.POST)
-    List<MCUOpInfo> getMCUOpInfo() {
+        @RequestMapping(path = "mCUOpInfo/{owner}/", method = RequestMethod.POST)
+    List<MCUOpInfo> getMCUOpInfo(@PathVariable("owner") String owner) {
         mCommonUtility.getLogger().info("API:{}",
                     "mCUOpInfo");
 

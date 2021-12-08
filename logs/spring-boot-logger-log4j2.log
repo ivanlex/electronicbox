@@ -1,308 +1,218 @@
-2021-11-24 22:34:20,356 INFO o.s.b.StartupInfoLogger [main] Starting Application on dev-ConceptD with PID 21288 (/home/dev/Projects/electronicbox/target/classes started by dev in /home/dev/Projects/electronicbox)
-2021-11-24 22:34:20,360 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
-2021-11-24 22:34:21,040 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8000 (http)
-2021-11-24 22:34:21,048 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8000"]
-2021-11-24 22:34:21,053 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
-2021-11-24 22:34:21,054 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
-2021-11-24 22:34:21,096 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2021-11-24 22:34:21,096 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 710 ms
-2021-11-24 22:34:21,328 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'clientInboundChannelExecutor'
-2021-11-24 22:34:21,330 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'clientOutboundChannelExecutor'
-2021-11-24 22:34:21,345 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'messageBrokerTaskScheduler'
-2021-11-24 22:34:21,364 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'brokerChannelExecutor'
-2021-11-24 22:34:21,494 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [public/index.html]
-2021-11-24 22:34:21,584 INFO o.s.c.l.CompositeLog [main] Starting...
-2021-11-24 22:34:21,584 INFO o.s.c.l.CompositeLog [main] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
-2021-11-24 22:34:21,585 INFO o.s.c.l.CompositeLog [main] Started.
-2021-11-24 22:34:21,589 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8000"]
-2021-11-24 22:34:21,599 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8000 (http) with context path ''
-2021-11-24 22:34:21,601 INFO o.s.b.StartupInfoLogger [main] Started Application in 1.529 seconds (JVM running for 2.023)
-2021-11-24 22:34:22,488 INFO o.a.j.l.DirectJDKLog [http-nio-8000-exec-2] A cookie header was received [1637670300,1637756207; Hm_lvt_e8002ef3d9e0d8274b5b74cc4a027d08=1637157335,1637670300,1637756208; Hm_lpvt_e8002ef3d9e0d8274b5b74cc4a027d08=1637763919; Hm_lpvt_b97569d26a525941d8d163729d284198=1637763919] that contained an invalid cookie. That cookie will be ignored.
+2021-11-27 11:16:26,078 INFO o.s.b.StartupInfoLogger [main] Starting Application on dev-ConceptD with PID 13338 (/home/dev/Projects/electronicbox/target/classes started by dev in /home/dev/Projects/electronicbox)
+2021-11-27 11:16:26,082 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-11-27 11:16:26,797 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8000 (http)
+2021-11-27 11:16:26,805 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-27 11:16:26,810 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2021-11-27 11:16:26,810 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-11-27 11:16:26,852 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-11-27 11:16:26,852 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 740 ms
+2021-11-27 11:16:27,113 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-11-27 11:16:27,116 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-11-27 11:16:27,130 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-11-27 11:16:27,151 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'brokerChannelExecutor'
+2021-11-27 11:16:27,302 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [public/index.html]
+2021-11-27 11:16:27,394 INFO o.s.c.l.CompositeLog [main] Starting...
+2021-11-27 11:16:27,395 INFO o.s.c.l.CompositeLog [main] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-11-27 11:16:27,395 INFO o.s.c.l.CompositeLog [main] Started.
+2021-11-27 11:16:27,400 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8000"]
+2021-11-27 11:16:27,410 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-27 11:16:27,412 INFO o.s.b.StartupInfoLogger [main] Started Application in 1.63 seconds (JVM running for 2.206)
+2021-11-27 11:16:34,429 INFO o.a.j.l.DirectJDKLog [http-nio-8000-exec-2] A cookie header was received [1637981344,1637981554,1637981616; Hm_lvt_e8002ef3d9e0d8274b5b74cc4a027d08=1637756208,1637981344,1637981554,1637981616; Hm_lpvt_b97569d26a525941d8d163729d284198=1637982491; Hm_lpvt_e8002ef3d9e0d8274b5b74cc4a027d08=1637982491; SECKEY_ABVK=ZCkMKAwkq81qa1ZsDkCZXT6s+zBEYBW+X9b+ZFN5UMI%3D; BMAP_SECKEY=b031e173eacfb0983c4d732e74b49023926cdb70569e739e6407c23d7b8a2edd9f645efb0bb462e579fb55f396a1001eee61331c18cd0438dcc2c312ad1c94e5537c97bad1f38a4c3b7ffef9079b0d3d53803e28554528e66ac1bae21ef7af5cb8d0795e171fdd1a26ee869a55a765204044135a14b33641bf11553681650d13cdd0c01fa073c3a2ac9ab8e970b1ea369170901ef9e366df2ab3ced3c5c84463c745bc6a13e10a36173e38d56d5c851260eead57fecdd9d06a836ceeaf0918c339042a9e0b011c29a41d81e8963a4d19a7e15a220f40b8ec04f6d91e66bb6d7e] that contained an invalid cookie. That cookie will be ignored.
  Note: further occurrences of this error will be logged at DEBUG level.
-2021-11-24 22:34:22,491 INFO o.a.j.l.DirectJDKLog [http-nio-8000-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-24 22:34:22,491 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Initializing Servlet 'dispatcherServlet'
-2021-11-24 22:34:22,494 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Completed initialization in 3 ms
-2021-11-24 22:34:22,516 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
-2021-11-24 22:34:22,516 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
-2021-11-24 22:34:22,528 INFO c.z.h.HikariDataSource [http-nio-8000-exec-1] HikariPool-1 - Starting...
-2021-11-24 22:34:22,724 INFO c.z.h.HikariDataSource [http-nio-8000-exec-1] HikariPool-1 - Start completed.
-2021-11-24 22:34:24,810 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
-2021-11-24 22:34:24,810 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
-2021-11-24 22:34:26,863 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
-2021-11-24 22:34:26,864 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuTopStatics
-2021-11-24 22:34:28,885 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
-2021-11-24 22:34:28,888 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
-2021-11-24 22:34:30,920 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuStatics
-2021-11-24 22:34:30,921 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuTopStatics
-2021-11-24 22:34:32,931 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
-2021-11-24 22:34:32,931 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
-2021-11-24 22:34:34,949 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
-2021-11-24 22:34:34,950 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
-2021-11-24 22:34:37,002 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
-2021-11-24 22:34:37,002 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
-2021-11-24 22:34:42,818 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuStatics
-2021-11-24 22:34:42,819 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuTopStatics
-2021-11-24 22:34:44,872 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
-2021-11-24 22:34:44,874 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
-2021-11-24 22:34:45,920 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 007
-2021-11-24 22:34:46,912 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
-2021-11-24 22:34:46,914 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
-2021-11-24 22:34:57,704 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
-2021-11-24 22:35:02,712 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 007
-2021-11-24 22:35:02,713 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 010
-2021-11-24 22:35:02,782 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:03,469 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
-2021-11-24 22:35:04,130 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
-2021-11-24 22:35:04,348 ERROR o.k.w.TestController [http-nio-8000-exec-4] Test API with WebSocket
-2021-11-24 22:35:04,552 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
-2021-11-24 22:35:04,735 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:04,912 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
-2021-11-24 22:35:05,079 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:05,226 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
-2021-11-24 22:35:05,436 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:05,608 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
-2021-11-24 22:35:05,798 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
-2021-11-24 22:35:06,007 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
-2021-11-24 22:35:06,201 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:06,398 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:06,830 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:07,023 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
-2021-11-24 22:35:07,199 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
-2021-11-24 22:35:07,382 ERROR o.k.w.TestController [http-nio-8000-exec-1] Test API with WebSocket
-2021-11-24 22:35:07,557 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:07,710 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:07,790 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 007
-2021-11-24 22:35:07,790 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 010
-2021-11-24 22:35:08,472 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
-2021-11-24 22:35:08,472 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
-2021-11-24 22:35:09,133 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 010
-2021-11-24 22:35:09,133 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 007
-2021-11-24 22:35:09,351 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 010
-2021-11-24 22:35:09,351 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 007
-2021-11-24 22:35:09,554 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 007
-2021-11-24 22:35:09,555 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 010
-2021-11-24 22:35:09,738 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 010
-2021-11-24 22:35:09,738 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 007
-2021-11-24 22:35:09,915 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 010
-2021-11-24 22:35:09,915 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 007
-2021-11-24 22:35:09,978 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
-2021-11-24 22:35:10,081 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 007
-2021-11-24 22:35:10,082 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 010
-2021-11-24 22:35:10,141 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:10,230 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 007
-2021-11-24 22:35:10,230 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 010
-2021-11-24 22:35:10,299 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:10,439 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
-2021-11-24 22:35:10,439 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
-2021-11-24 22:35:10,444 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:10,611 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 010
-2021-11-24 22:35:10,611 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 007
-2021-11-24 22:35:10,800 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 010
-2021-11-24 22:35:10,800 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 007
-2021-11-24 22:35:10,889 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
-2021-11-24 22:35:11,016 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
-2021-11-24 22:35:11,205 ERROR o.k.w.TestController [http-nio-8000-exec-1] Test API with WebSocket
-2021-11-24 22:35:11,382 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:11,520 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:11,723 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
-2021-11-24 22:35:11,892 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:12,060 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:12,192 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:12,397 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
-2021-11-24 22:35:12,534 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:12,747 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
-2021-11-24 22:35:12,791 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 007
-2021-11-24 22:35:12,791 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 010
-2021-11-24 22:35:12,925 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:13,109 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:13,293 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
-2021-11-24 22:35:13,474 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
-2021-11-24 22:35:13,474 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
-2021-11-24 22:35:13,479 ERROR o.k.w.TestController [http-nio-8000-exec-1] Test API with WebSocket
-2021-11-24 22:35:13,662 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:13,847 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:14,037 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
-2021-11-24 22:35:14,135 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 010
-2021-11-24 22:35:14,135 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 007
-2021-11-24 22:35:14,201 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
-2021-11-24 22:35:14,353 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 010
-2021-11-24 22:35:14,353 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 007
-2021-11-24 22:35:14,412 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:14,557 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 007
-2021-11-24 22:35:14,557 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 010
-2021-11-24 22:35:14,597 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:14,741 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 010
-2021-11-24 22:35:14,741 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 007
-2021-11-24 22:35:14,793 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
-2021-11-24 22:35:14,917 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 007
-2021-11-24 22:35:14,918 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 010
-2021-11-24 22:35:14,967 ERROR o.k.w.TestController [http-nio-8000-exec-1] Test API with WebSocket
-2021-11-24 22:35:15,083 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 007
-2021-11-24 22:35:15,083 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 010
-2021-11-24 22:35:15,164 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
-2021-11-24 22:35:15,232 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 007
-2021-11-24 22:35:15,232 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 010
-2021-11-24 22:35:15,338 ERROR o.k.w.TestController [http-nio-8000-exec-4] Test API with WebSocket
-2021-11-24 22:35:15,440 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
-2021-11-24 22:35:15,440 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
-2021-11-24 22:35:15,557 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
-2021-11-24 22:35:15,613 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 010
-2021-11-24 22:35:15,613 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 007
-2021-11-24 22:35:15,765 ERROR o.k.w.TestController [http-nio-8000-exec-1] Test API with WebSocket
-2021-11-24 22:35:15,802 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 010
-2021-11-24 22:35:15,802 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 007
-2021-11-24 22:35:15,948 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
-2021-11-24 22:35:16,885 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:17,056 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
-2021-11-24 22:35:17,261 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
-2021-11-24 22:35:17,423 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:17,621 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
-2021-11-24 22:35:17,781 ERROR o.k.w.TestController [http-nio-8000-exec-7] Test API with WebSocket
-2021-11-24 22:35:17,792 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 007
-2021-11-24 22:35:17,792 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 010
-2021-11-24 22:35:17,988 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:18,172 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
-2021-11-24 22:35:18,370 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
-2021-11-24 22:35:18,476 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
-2021-11-24 22:35:18,476 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
-2021-11-24 22:35:18,515 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
-2021-11-24 22:35:18,724 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:18,918 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
-2021-11-24 22:35:19,101 ERROR o.k.w.TestController [http-nio-8000-exec-4] Test API with WebSocket
-2021-11-24 22:35:19,136 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 007
-2021-11-24 22:35:19,136 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 010
-2021-11-24 22:35:19,292 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:19,355 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 007
-2021-11-24 22:35:19,355 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 010
-2021-11-24 22:35:19,467 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
-2021-11-24 22:35:19,558 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 010
-2021-11-24 22:35:19,558 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 007
-2021-11-24 22:35:19,653 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
-2021-11-24 22:35:19,742 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 010
-2021-11-24 22:35:19,742 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 007
-2021-11-24 22:35:19,800 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:19,919 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 007
-2021-11-24 22:35:19,919 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 010
-2021-11-24 22:35:20,012 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:20,085 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 007
-2021-11-24 22:35:20,085 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 010
-2021-11-24 22:35:20,182 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
-2021-11-24 22:35:20,233 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 010
-2021-11-24 22:35:20,233 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 007
-2021-11-24 22:35:20,396 ERROR o.k.w.TestController [http-nio-8000-exec-10] Test API with WebSocket
-2021-11-24 22:35:20,441 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
-2021-11-24 22:35:20,441 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
-2021-11-24 22:35:20,585 ERROR o.k.w.TestController [http-nio-8000-exec-2] Test API with WebSocket
-2021-11-24 22:35:20,614 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 010
-2021-11-24 22:35:20,614 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 007
-2021-11-24 22:35:20,771 ERROR o.k.w.TestController [http-nio-8000-exec-6] Test API with WebSocket
-2021-11-24 22:35:20,802 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 010
-2021-11-24 22:35:20,802 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 007
-2021-11-24 22:35:20,966 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
-2021-11-24 22:35:21,130 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:21,364 INFO o.s.w.s.c.WebSocketMessageBrokerStats [MessageBroker-8] WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 24, active threads = 24, queued tasks = 182, completed tasks = 280], outboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 159], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 9]
-2021-11-24 22:35:22,793 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 010
-2021-11-24 22:35:22,793 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 007
-2021-11-24 22:35:23,121 ERROR o.k.w.TestController [http-nio-8000-exec-3] Test API with WebSocket
-2021-11-24 22:35:23,477 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 007
-2021-11-24 22:35:23,477 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 010
-2021-11-24 22:35:24,136 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 007
-2021-11-24 22:35:24,136 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 010
-2021-11-24 22:35:24,356 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 010
-2021-11-24 22:35:24,356 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 007
-2021-11-24 22:35:24,559 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 007
-2021-11-24 22:35:24,559 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 010
-2021-11-24 22:35:24,743 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 007
-2021-11-24 22:35:24,743 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 010
-2021-11-24 22:35:24,920 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 007
-2021-11-24 22:35:24,920 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 010
-2021-11-24 22:35:25,086 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 010
-2021-11-24 22:35:25,086 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 007
-2021-11-24 22:35:25,233 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 007
-2021-11-24 22:35:25,233 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 010
-2021-11-24 22:35:25,442 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
-2021-11-24 22:35:25,442 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
-2021-11-24 22:35:25,615 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 010
-2021-11-24 22:35:25,615 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 007
-2021-11-24 22:35:25,803 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 007
-2021-11-24 22:35:25,803 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 010
-2021-11-24 22:35:27,505 ERROR o.k.w.TestController [http-nio-8000-exec-5] Test API with WebSocket
-2021-11-24 22:35:27,795 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 010
-2021-11-24 22:35:27,795 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 007
-2021-11-24 22:35:28,479 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
-2021-11-24 22:35:28,479 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
-2021-11-24 22:35:29,138 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 007
-2021-11-24 22:35:29,138 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 010
-2021-11-24 22:35:29,357 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 007
-2021-11-24 22:35:29,357 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 010
-2021-11-24 22:35:29,561 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 007
-2021-11-24 22:35:29,561 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 010
-2021-11-24 22:35:29,745 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 007
-2021-11-24 22:35:29,745 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 010
-2021-11-24 22:35:29,922 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 010
-2021-11-24 22:35:29,922 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 007
-2021-11-24 22:35:30,088 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 010
-2021-11-24 22:35:30,088 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 007
-2021-11-24 22:35:30,235 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 007
-2021-11-24 22:35:30,235 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 010
-2021-11-24 22:35:30,444 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
-2021-11-24 22:35:30,444 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
-2021-11-24 22:35:30,617 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 007
-2021-11-24 22:35:30,617 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 010
-2021-11-24 22:35:30,805 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 007
-2021-11-24 22:35:30,805 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 010
-2021-11-24 22:35:32,797 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 007
-2021-11-24 22:35:32,797 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 010
-2021-11-24 22:35:33,469 ERROR o.k.w.TestController [http-nio-8000-exec-8] Test API with WebSocket
-2021-11-24 22:35:33,481 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
-2021-11-24 22:35:33,481 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
-2021-11-24 22:35:34,140 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 010
-2021-11-24 22:35:34,140 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 007
-2021-11-24 22:35:34,359 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 007
-2021-11-24 22:35:34,359 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 010
-2021-11-24 22:35:34,563 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 007
-2021-11-24 22:35:34,563 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 010
-2021-11-24 22:35:34,747 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 007
-2021-11-24 22:35:34,747 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 010
-2021-11-24 22:35:34,924 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 010
-2021-11-24 22:35:34,924 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 007
-2021-11-24 22:35:35,090 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 010
-2021-11-24 22:35:35,090 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 007
-2021-11-24 22:35:35,236 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 007
-2021-11-24 22:35:35,236 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 010
-2021-11-24 22:35:35,446 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 010
-2021-11-24 22:35:35,446 ERROR o.k.w.WebSocketController [clientInboundChannel-11] 007
-2021-11-24 22:35:35,618 ERROR o.k.w.WebSocketController [clientInboundChannel-2] 007
-2021-11-24 22:35:35,619 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 010
-2021-11-24 22:35:35,807 ERROR o.k.w.WebSocketController [clientInboundChannel-6] 010
-2021-11-24 22:35:35,807 ERROR o.k.w.WebSocketController [clientInboundChannel-13] 007
-2021-11-24 22:35:37,799 ERROR o.k.w.WebSocketController [clientInboundChannel-19] 007
-2021-11-24 22:35:37,799 ERROR o.k.w.WebSocketController [clientInboundChannel-22] 010
-2021-11-24 22:35:38,405 ERROR o.k.w.TestController [http-nio-8000-exec-9] Test API with WebSocket
-2021-11-24 22:35:38,482 ERROR o.k.w.WebSocketController [clientInboundChannel-1] 007
-2021-11-24 22:35:38,482 ERROR o.k.w.WebSocketController [clientInboundChannel-4] 010
-2021-11-24 22:35:39,142 ERROR o.k.w.WebSocketController [clientInboundChannel-10] 007
-2021-11-24 22:35:39,142 ERROR o.k.w.WebSocketController [clientInboundChannel-9] 010
-2021-11-24 22:35:39,360 ERROR o.k.w.WebSocketController [clientInboundChannel-18] 010
-2021-11-24 22:35:39,360 ERROR o.k.w.WebSocketController [clientInboundChannel-14] 007
-2021-11-24 22:35:39,564 ERROR o.k.w.WebSocketController [clientInboundChannel-21] 010
-2021-11-24 22:35:39,564 ERROR o.k.w.WebSocketController [clientInboundChannel-24] 007
-2021-11-24 22:35:39,748 ERROR o.k.w.WebSocketController [clientInboundChannel-5] 010
-2021-11-24 22:35:39,748 ERROR o.k.w.WebSocketController [clientInboundChannel-8] 007
-2021-11-24 22:35:39,925 ERROR o.k.w.WebSocketController [clientInboundChannel-16] 007
-2021-11-24 22:35:39,925 ERROR o.k.w.WebSocketController [clientInboundChannel-15] 010
-2021-11-24 22:35:40,091 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 010
-2021-11-24 22:35:40,091 ERROR o.k.w.WebSocketController [clientInboundChannel-3] 007
-2021-11-24 22:35:40,237 ERROR o.k.w.WebSocketController [clientInboundChannel-17] 010
-2021-11-24 22:35:40,237 ERROR o.k.w.WebSocketController [clientInboundChannel-23] 007
-2021-11-24 22:35:43,413 ERROR o.k.w.WebSocketController [clientInboundChannel-20] 007
-2021-11-24 22:35:43,414 ERROR o.k.w.WebSocketController [clientInboundChannel-12] 010
-2021-11-24 22:35:43,572 INFO o.s.c.l.CompositeLog [Thread-5] Stopping...
-2021-11-24 22:35:43,572 INFO o.s.c.l.CompositeLog [Thread-5] BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
-2021-11-24 22:35:43,572 INFO o.s.c.l.CompositeLog [Thread-5] Stopped.
-2021-11-24 22:35:43,573 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'brokerChannelExecutor'
-2021-11-24 22:35:43,574 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'messageBrokerTaskScheduler'
-2021-11-24 22:35:43,576 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'clientOutboundChannelExecutor'
-2021-11-24 22:35:43,577 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'clientInboundChannelExecutor'
-2021-11-24 22:35:43,582 INFO c.z.h.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
-2021-11-24 22:35:43,589 INFO c.z.h.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2021-11-27 11:16:34,433 INFO o.a.j.l.DirectJDKLog [http-nio-8000-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-27 11:16:34,433 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-11-27 11:16:34,437 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-2] Completed initialization in 4 ms
+2021-11-27 11:16:38,390 INFO c.z.h.HikariDataSource [http-nio-8000-exec-8] HikariPool-1 - Starting...
+2021-11-27 11:16:38,617 INFO c.z.h.HikariDataSource [http-nio-8000-exec-8] HikariPool-1 - Start completed.
+2021-11-27 11:16:38,645 INFO o.k.w.LoginController [http-nio-8000-exec-8] API:loginVerify,username:admin,password:admin
+2021-11-27 11:16:40,713 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-27 11:16:40,714 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
+2021-11-27 11:16:42,767 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-27 11:16:42,769 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuTopStatics
+2021-11-27 11:16:43,779 ERROR o.k.w.WebSocketController [clientInboundChannel-7] 007
+2021-11-27 11:16:49,784 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
+2021-11-27 11:16:49,784 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:17:01,819 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuStatics
+2021-11-27 11:17:01,820 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuTopStatics
+2021-11-27 11:17:03,849 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
+2021-11-27 11:17:03,849 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuTopStatics
+2021-11-27 11:17:05,873 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
+2021-11-27 11:17:05,874 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-27 11:17:07,890 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuTopStatics
+2021-11-27 11:17:07,890 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-27 11:17:09,900 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuTopStatics
+2021-11-27 11:17:09,900 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuStatics
+2021-11-27 11:17:11,910 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuTopStatics
+2021-11-27 11:17:11,910 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuStatics
+2021-11-27 11:17:13,921 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuTopStatics
+2021-11-27 11:17:13,921 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
+2021-11-27 11:17:15,940 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
+2021-11-27 11:17:15,941 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
+2021-11-27 11:17:17,966 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
+2021-11-27 11:17:17,966 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
+2021-11-27 11:17:19,988 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
+2021-11-27 11:17:19,990 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:17:22,002 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuStatics
+2021-11-27 11:17:22,002 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuTopStatics
+2021-11-27 11:17:24,019 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-27 11:17:24,020 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
+2021-11-27 11:17:26,044 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
+2021-11-27 11:17:26,045 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-27 11:17:27,150 INFO o.s.w.s.c.WebSocketMessageBrokerStats [MessageBroker-10] WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 9, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 11]
+2021-11-27 11:17:28,063 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
+2021-11-27 11:17:28,064 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
+2021-11-27 11:17:30,082 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
+2021-11-27 11:17:30,082 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:17:32,098 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuStatics
+2021-11-27 11:17:32,099 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuTopStatics
+2021-11-27 11:17:34,124 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
+2021-11-27 11:17:34,124 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuTopStatics
+2021-11-27 11:17:36,144 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
+2021-11-27 11:17:36,145 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
+2021-11-27 11:17:38,158 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuTopStatics
+2021-11-27 11:17:38,158 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuStatics
+2021-11-27 11:17:40,172 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuStatics
+2021-11-27 11:17:40,173 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuTopStatics
+2021-11-27 11:17:42,201 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-27 11:17:42,203 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
+2021-11-27 11:17:44,230 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
+2021-11-27 11:17:44,231 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
+2021-11-27 11:17:46,258 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-27 11:17:46,259 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuTopStatics
+2021-11-27 11:17:48,274 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
+2021-11-27 11:17:48,275 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:17:50,287 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuStatics
+2021-11-27 11:17:50,288 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuTopStatics
+2021-11-27 11:17:52,304 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuTopStatics
+2021-11-27 11:17:52,304 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
+2021-11-27 11:17:54,312 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
+2021-11-27 11:17:54,312 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-27 11:17:56,327 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-27 11:17:56,329 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuTopStatics
+2021-11-27 11:17:58,358 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:17:58,358 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
+2021-11-27 11:18:00,368 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuStatics
+2021-11-27 11:18:00,368 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuTopStatics
+2021-11-27 11:18:02,376 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-27 11:18:02,377 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
+2021-11-27 11:18:04,386 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
+2021-11-27 11:18:04,387 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
+2021-11-27 11:18:06,406 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-27 11:18:06,411 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuTopStatics
+2021-11-27 11:18:08,435 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuStatics
+2021-11-27 11:18:08,435 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuTopStatics
+2021-11-27 11:18:10,509 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuStatics
+2021-11-27 11:18:10,509 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuTopStatics
+2021-11-27 11:18:12,518 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuTopStatics
+2021-11-27 11:18:12,518 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
+2021-11-27 11:18:14,529 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
+2021-11-27 11:18:14,529 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-27 11:18:16,541 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuTopStatics
+2021-11-27 11:18:16,541 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-27 11:18:18,549 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
+2021-11-27 11:18:18,549 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:18:20,559 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuStatics
+2021-11-27 11:18:20,559 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuTopStatics
+2021-11-27 11:18:22,568 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-27 11:18:22,568 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
+2021-11-27 11:18:24,579 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
+2021-11-27 11:18:24,581 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
+2021-11-27 11:18:26,598 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
+2021-11-27 11:18:26,598 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
+2021-11-27 11:18:29,728 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:getAllMcu
+2021-11-27 11:18:30,489 INFO o.k.w.HistoryController [http-nio-8000-exec-6] API:mcuHistory
+2021-11-27 11:18:31,399 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:getAllMcu
+2021-11-27 11:18:41,260 INFO o.k.w.DataController [http-nio-8000-exec-2] API:mCUOpInfo
+2021-11-27 11:18:44,862 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-27 11:18:44,862 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-27 11:18:47,735 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
+2021-11-27 11:18:47,736 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
+2021-11-27 11:18:49,750 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
+2021-11-27 11:18:49,751 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:18:54,340 INFO o.k.w.HistoryController [http-nio-8000-exec-6] API:mcuHistory
+2021-11-27 11:18:55,701 INFO o.k.w.HistoryController [http-nio-8000-exec-9] API:mcuHistory
+2021-11-27 11:18:56,509 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:getAllMcu
+2021-11-27 11:18:56,962 INFO o.k.w.HistoryController [http-nio-8000-exec-3] API:mcuHistory
+2021-11-27 11:18:58,331 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:getAllMcu
+2021-11-27 11:18:58,636 INFO o.k.w.HistoryController [http-nio-8000-exec-4] API:mcuHistory
+2021-11-27 11:19:09,461 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuStatics
+2021-11-27 11:19:09,462 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuTopStatics
+2021-11-27 11:19:11,494 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
+2021-11-27 11:19:11,494 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuTopStatics
+2021-11-27 11:19:13,511 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuStatics
+2021-11-27 11:19:13,511 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
+2021-11-27 11:19:15,530 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
+2021-11-27 11:19:15,530 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuTopStatics
+2021-11-27 11:19:17,544 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-27 11:19:17,545 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
+2021-11-27 11:19:19,561 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
+2021-11-27 11:19:19,562 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:19:21,576 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuStatics
+2021-11-27 11:19:21,577 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuTopStatics
+2021-11-27 11:19:23,592 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
+2021-11-27 11:19:23,593 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuTopStatics
+2021-11-27 11:19:25,605 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-27 11:19:25,605 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-27 11:19:27,614 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
+2021-11-27 11:19:27,615 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
+2021-11-27 11:19:29,627 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuStatics
+2021-11-27 11:19:29,628 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuTopStatics
+2021-11-27 11:19:31,640 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
+2021-11-27 11:19:31,641 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuTopStatics
+2021-11-27 11:19:33,653 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuStatics
+2021-11-27 11:19:33,654 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
+2021-11-27 11:19:35,669 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
+2021-11-27 11:19:35,669 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuTopStatics
+2021-11-27 11:19:37,681 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-27 11:19:37,681 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
+2021-11-27 11:19:39,689 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:19:39,689 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
+2021-11-27 11:19:41,699 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuStatics
+2021-11-27 11:19:41,699 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuTopStatics
+2021-11-27 11:19:43,718 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
+2021-11-27 11:19:43,719 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuTopStatics
+2021-11-27 11:19:45,739 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-27 11:19:45,740 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-27 11:19:47,781 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
+2021-11-27 11:19:47,781 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
+2021-11-27 11:19:49,791 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuStatics
+2021-11-27 11:19:49,791 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuTopStatics
+2021-11-27 11:19:51,803 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuStatics
+2021-11-27 11:19:51,803 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuTopStatics
+2021-11-27 11:19:53,814 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
+2021-11-27 11:19:53,814 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuTopStatics
+2021-11-27 11:19:55,824 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-27 11:19:55,824 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-27 11:19:57,832 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-27 11:19:57,832 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
+2021-11-27 11:19:59,839 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
+2021-11-27 11:19:59,840 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:20:01,853 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuStatics
+2021-11-27 11:20:01,853 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuTopStatics
+2021-11-27 11:20:03,877 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuStatics
+2021-11-27 11:20:03,878 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuTopStatics
+2021-11-27 11:20:05,897 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuStatics
+2021-11-27 11:20:05,897 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuTopStatics
+2021-11-27 11:20:07,911 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuStatics
+2021-11-27 11:20:07,911 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuTopStatics
+2021-11-27 11:20:09,921 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuTopStatics
+2021-11-27 11:20:09,921 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuStatics
+2021-11-27 11:20:11,936 INFO o.k.w.MaintainController [http-nio-8000-exec-9] API:mcuStatics
+2021-11-27 11:20:11,937 INFO o.k.w.MaintainController [http-nio-8000-exec-6] API:mcuTopStatics
+2021-11-27 11:20:13,957 INFO o.k.w.MaintainController [http-nio-8000-exec-2] API:mcuStatics
+2021-11-27 11:20:13,957 INFO o.k.w.MaintainController [http-nio-8000-exec-10] API:mcuTopStatics
+2021-11-27 11:20:15,966 INFO o.k.w.MaintainController [http-nio-8000-exec-1] API:mcuStatics
+2021-11-27 11:20:15,966 INFO o.k.w.MaintainController [http-nio-8000-exec-3] API:mcuTopStatics
+2021-11-27 11:20:17,974 INFO o.k.w.MaintainController [http-nio-8000-exec-4] API:mcuTopStatics
+2021-11-27 11:20:17,974 INFO o.k.w.MaintainController [http-nio-8000-exec-5] API:mcuStatics
+2021-11-27 11:20:20,606 INFO o.k.w.MaintainController [http-nio-8000-exec-7] API:mcuStatics
+2021-11-27 11:20:20,606 INFO o.k.w.MaintainController [http-nio-8000-exec-8] API:mcuTopStatics
+2021-11-27 11:20:22,565 INFO o.s.c.l.CompositeLog [Thread-5] Stopping...
+2021-11-27 11:20:22,565 INFO o.s.c.l.CompositeLog [Thread-5] BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-11-27 11:20:22,566 INFO o.s.c.l.CompositeLog [Thread-5] Stopped.
+2021-11-27 11:20:22,567 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'brokerChannelExecutor'
+2021-11-27 11:20:22,567 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2021-11-27 11:20:22,569 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2021-11-27 11:20:22,569 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'clientInboundChannelExecutor'
+2021-11-27 11:20:22,570 INFO c.z.h.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2021-11-27 11:20:22,578 INFO c.z.h.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.

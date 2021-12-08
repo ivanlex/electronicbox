@@ -32,4 +32,10 @@ public class Commons {
     public static final String ERR_WEB_UNKNOWN_499 = "499";
 
     public static final String TEST_TOKEN = "TOKEN20211001";
+
+    public static int HEADER_LENGTH = 4;
+    public static int PACKET_PAYLOAD = 10;
+    public static int PACKET_CHECKSUM = 11;
+    public static int PACKET_LENGTH = 12;
+    public static byte[] HEADER = new byte[] {0x68, 0x06,0x06, 0x68};
 }
