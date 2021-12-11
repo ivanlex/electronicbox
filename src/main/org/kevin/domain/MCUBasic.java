@@ -11,6 +11,7 @@ public class MCUBasic {
     double mLatitude;
     double mLongitude;
     Date mInstallDate;
+    String mUserId;
 
     public double getLatitude() {
         return mLatitude;
@@ -74,5 +75,13 @@ public class MCUBasic {
 
     public void setInstallDate(Date installDate) {
         mInstallDate = installDate;
+    }
+
+    public String getUserId() {
+        return mUserId;
+    }
+
+    public void setUserId(String userId) {
+        mUserId = userId;
     }
 }

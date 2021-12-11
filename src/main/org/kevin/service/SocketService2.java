@@ -3,8 +3,10 @@ package org.kevin.service;
 import org.apache.logging.log4j.core.jackson.ContextDataAsEntryListSerializer;
 import org.kevin.dao.MCUHistoryDao;
 import org.kevin.dao.MCUOpInfoDao;
+import org.kevin.domain.WSNotifyType;
 import org.kevin.service.base.ServiceBase;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
@@ -24,6 +26,8 @@ public class SocketService2 extends ServiceBase {
     MCUOpInfoDao mMCUOpInfoDao;
     MCUHistoryDao mMCUHistoryDao;
 
+    WebSocketService mWebSocketService;
+
     private ServerSocket mServerSocket;
     private boolean mStarted;
     private Integer mPort = 2800;
@@ -38,6 +42,13 @@ public class SocketService2 extends ServiceBase {
     @Autowired
     public void setMCUOpInfoDao(MCUOpInfoDao MCUOpInfoDao) {
         mMCUOpInfoDao = MCUOpInfoDao;
+    }
+
+
+
+    @Autowired
+    public void setWebSocketService(WebSocketService webSocketService) {
+        mWebSocketService = webSocketService;
     }
 
     public void start() {
@@ -194,6 +205,7 @@ public class SocketService2 extends ServiceBase {
                 {
                     System.out.println("MCUId:" +  mcuId + "1:" + bytes[1] + "2:" +
                             bytes[2] + "3:" + bytes[3] + "4:" + bytes[4] + "5:" + bytes[5]);
+                    mWebSocketService.notifyUserInfo(mcuId, WSNotifyType.ALERT);
                     mMCUHistoryDao.insertMCUHistory(mcuId,bytes[1],bytes[2],bytes[3],bytes[4],bytes[5],new Date());
                     return;
                 }

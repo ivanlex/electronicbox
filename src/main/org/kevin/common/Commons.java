@@ -38,4 +38,6 @@ public class Commons {
     public static int PACKET_CHECKSUM = 11;
     public static int PACKET_LENGTH = 12;
     public static byte[] HEADER = new byte[] {0x68, 0x06,0x06, 0x68};
+
+    public static int WS_EXPIRED_MINUTE = 3;
 }
