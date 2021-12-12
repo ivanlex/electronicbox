@@ -1,6 +1,7 @@
 package org.kevin.web;
 
 import org.kevin.common.Commons;
+import org.kevin.domain.MCUAlertStatics;
 import org.kevin.domain.MCUBasic;
 import org.kevin.domain.MCUOpInfo;
 import org.kevin.domain.reqres.web.*;
@@ -9,6 +10,7 @@ import org.kevin.web.base.ControllerBase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -85,14 +87,27 @@ public class MaintainController extends ControllerBase {
         return mMaintainService.getAllMCU(userId);
     }
 
-    @RequestMapping(path = "mcuStatics/{userId}", method = RequestMethod.POST)
-    public MCUStaticsResponse getMCUStatics(@PathVariable String userId){
+    @RequestMapping(path = "mcuStatics", method = RequestMethod.POST)
+    public MCUStaticsResponse getMCUStatics(@RequestParam("token") String token){
         mCommonUtility.getLogger().info("API:{}",
-                "mcuStatics/" + userId);
+                "mcuStatics/" + token);
 
-        return mMaintainService.getMCUStatics(userId);
+        return mMaintainService.getMCUStatics(token);
     }
 
+    @RequestMapping(path = "mcuAlertStatics", method = RequestMethod.POST)
+    public List<MCUAlertStatics> getMCUAlertStatics(
+            @RequestParam("token") String token,
+            @RequestParam("queryLocation") String location,
+            @RequestParam("queryDate") Date date)
+    {
+        mCommonUtility.getLogger().info("API:{},queryLocation:{},queryDate:{}",
+                "mcuStatics/" + token,location,date);
+
+        return mMaintainService.getMCUAlertStatics(token, location, date);
+    }
+
+    @Deprecated
     @RequestMapping(path = "mcuTopStatics/{userId}", method = RequestMethod.POST)
     public List<MCUOpInfo> getTopMCU(@PathVariable("userId") String userId)
     {

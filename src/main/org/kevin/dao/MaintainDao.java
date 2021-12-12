@@ -3,7 +3,7 @@ package org.kevin.dao;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 import org.kevin.domain.MCUBasic;
-import org.kevin.domain.MCUOpInfo;
+import org.kevin.domain.MCUAlertStatics;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
@@ -59,5 +59,20 @@ public interface MaintainDao {
             @Result(property = "userId",column = "User_ID"),
     })
     MCUBasic getMcuById(String mcuId);
+
+
+    @Select("Select Year(historyInfo.Updated_Time) as Year,Month(historyInfo.Updated_Time) as Month , count(historyInfo.Lightning_Count) as Times" +
+            " From t_mcu_history_info as historyInfo  join t_mcu_basic_info as basicInfo on historyInfo.MCU_ID = basicInfo.MCU_ID" +
+            " WHERE" +
+            " basicInfo.User_ID = #{userId} and" +
+            " (historyInfo.Updated_Time >= #{date} and historyInfo.Updated_Time <= NOW()) and" +
+            " basicInfo.Address = #{location}" +
+            " GROUP BY Year(historyInfo.Updated_Time), Month(historyInfo.Updated_Time)")
+    @Results(value = {
+            @Result(property = "year",column = "Year"),
+            @Result(property = "month",column = "Month"),
+            @Result(property = "times",column = "Times"),
+    })
+    List<MCUAlertStatics> countAlertStatics(String userId, String location, Date date);
 
 }

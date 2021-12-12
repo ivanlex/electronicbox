@@ -25,4 +25,7 @@ public interface UserDao2 {
 
     @Select("Select case when count(*) > 0 then 1 else 0 end from t_user where Login_Token= #{token}")
     boolean validateToken(String token);
+
+    @Select("Select User_ID from t_user where Login_Token= #{token}")
+    String getUserIdByToken(String token);
 }
