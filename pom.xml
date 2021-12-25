@@ -257,11 +257,6 @@
             <artifactId>jquery</artifactId>
             <version>${jquery.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.kevin</groupId>
-            <artifactId>web_server</artifactId>
-            <version>1.0</version>
-        </dependency>
 
     </dependencies>
 
