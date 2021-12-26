@@ -15,7 +15,7 @@ public interface MCUOpInfoDao {
 
     @Select("select *, case when NOW() - Update_Time <  300 * #{minute} then 1 else 0 end as 'Is_Online'" +
             " from t_mcu_op_info as opInfo join t_mcu_basic_info as basicInfo on opInfo.MCU_ID = basicInfo.MCU_ID" +
-            " where UserId = #{userId}")
+            " where User_Id = #{userId}")
     @Results({
             @Result(property = "mcuId", column = "MCU_ID"),
             @Result(property = "description", column = "Description"),

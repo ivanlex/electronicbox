@@ -108,12 +108,12 @@ public class MaintainController extends ControllerBase {
     }
 
     @Deprecated
-    @RequestMapping(path = "mcuTopStatics/{userId}", method = RequestMethod.POST)
-    public List<MCUOpInfo> getTopMCU(@PathVariable("userId") String userId)
+    @RequestMapping(path = "mcuTopStatics", method = RequestMethod.POST)
+    public List<MCUOpInfo> getTopMCU(@RequestParam("token") String token)
     {
         mCommonUtility.getLogger().info("API:{}",
-                "mcuTopStatics/" + userId);
+                "mcuTopStatics/" + token);
 
-        return mMaintainService.getMCUTopStatics(userId);
+        return mMaintainService.getMCUTopStatics(token);
     }
 }

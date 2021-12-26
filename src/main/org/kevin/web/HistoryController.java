@@ -19,13 +19,13 @@ public class HistoryController extends ControllerBase {
         mMCUHistoryService = MCUHistoryService;
     }
 
-    @RequestMapping(path = "mcuHistory/{userId}", method = RequestMethod.POST)
-    List<MCUHistoryInfo> mcuHistory(@RequestBody HistoryRequest request, @PathVariable("userId") String userId)
+    @RequestMapping(path = "mcuHistory", method = RequestMethod.POST)
+    List<MCUHistoryInfo> mcuHistory(@RequestBody HistoryRequest request)
     {
         mCommonUtility.getLogger().info("API:{}",
                 "mcuHistory");
 
-        List<MCUHistoryInfo> response =  mMCUHistoryService.getHistoryByDeviceId(request.getDeviceId(), userId);
+        List<MCUHistoryInfo> response =  mMCUHistoryService.getHistoryByDeviceId(request.getDeviceId(), request.getToken());
         return response;
     }
 }

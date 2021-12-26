@@ -117,8 +117,10 @@ public class MaintainService extends ServiceBase {
     }
 
     @Deprecated
-    public List<MCUOpInfo> getMCUTopStatics(String userId)
+    public List<MCUOpInfo> getMCUTopStatics(String token)
     {
+        String userId = mUserDao2.getUserIdByToken(token);
+
         List<MCUOpInfo> mcuOpInfos = mMCUOpInfoDao.getTop5MCUStatus(2,userId);
 
         while(mcuOpInfos.size() < 5)
